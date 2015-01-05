@@ -1,0 +1,16 @@
+[
+{
+  "modid": "tnkchem2",
+  "name": "Periodic Production 2",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Tinkerlad"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
