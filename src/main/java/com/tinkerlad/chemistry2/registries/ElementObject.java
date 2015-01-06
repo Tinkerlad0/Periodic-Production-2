@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry2.util;
+package com.tinkerlad.chemistry2.registries;
 
 /**
  * Created by brock_000 on 4/01/2015.
@@ -79,4 +79,5 @@ public class ElementObject {
     public String getThermal_conductivity() {
         return thermal_conductivity;
     }
+
 }

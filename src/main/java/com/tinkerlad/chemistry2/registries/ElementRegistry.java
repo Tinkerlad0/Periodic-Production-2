@@ -6,7 +6,6 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import com.tinkerlad.chemistry2.handler.LogHandler;
-import com.tinkerlad.chemistry2.util.ElementObject;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -63,5 +62,23 @@ public class ElementRegistry {
         Set<Map.Entry<String, JsonElement>> entries = lst.entrySet();
 
         return entries;
+    }
+
+    public ElementObject getElementFromZ(int Z) {
+        for (ElementObject obj : elementObjects) {
+            if (obj.getZ().matches(String.valueOf(Z))) {
+                return obj;
+            }
+        }
+        return null;
+    }
+
+    public ElementObject getElementFromSymbol(String symbol) {
+        for (ElementObject obj : elementObjects) {
+            if (obj.getSymbol().equals(symbol)) {
+                return obj;
+            }
+        }
+        return null;
     }
 }

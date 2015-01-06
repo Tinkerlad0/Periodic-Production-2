@@ -45,6 +45,8 @@ public class Chemistry {
 
         ElementRegistry.getInstance();
 
+        //DevUtils.dumpBlockNames();
+
         ModBlocks.init();
         ModItems.init();
         TileEntites.init();

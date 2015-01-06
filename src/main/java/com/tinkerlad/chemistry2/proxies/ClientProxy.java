@@ -15,6 +15,6 @@ public class ClientProxy extends CommonProxy {
         RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 
         renderItem.getItemModelMesher().register(ModItems.itemTesting, 0, new ModelResourceLocation(Chemistry.MODID + ":testing","inventory"));
-        ModelBakery.addVariantName(ModItems.itemTesting,ModItems.itemTesting.name);
+        ModelBakery.addVariantName(ModItems.itemTesting, Chemistry.MODID + ":" + ModItems.itemTesting.name);
     }
 }
