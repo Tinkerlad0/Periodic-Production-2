@@ -2,6 +2,7 @@ package com.tinkerlad.chemistry2;
 
 import com.tinkerlad.chemistry2.block.ModBlocks;
 import com.tinkerlad.chemistry2.config.Config;
+import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.item.ModItems;
 import com.tinkerlad.chemistry2.proxies.CommonProxy;
 import com.tinkerlad.chemistry2.registries.ElementRegistry;
@@ -12,6 +13,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import org.apache.logging.log4j.core.Logger;
 
 import java.io.File;
 import java.util.Random;
@@ -35,6 +37,8 @@ public class Chemistry {
     public void preInit(FMLPreInitializationEvent event) {
         long begin = System.currentTimeMillis();
 
+        LogHandler.setLogger((Logger) event.getModLog());
+
         mcDir = event.getModConfigurationDirectory().getParentFile();
 
         Config.preInit(event.getSuggestedConfigurationFile());
@@ -47,7 +51,7 @@ public class Chemistry {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("Pre-Init took " + (end - begin) + " milliseconds.");
+        LogHandler.all("Pre-Init took " + (end - begin) + " milliseconds.");
     }
 
     @Mod.EventHandler

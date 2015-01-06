@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
+import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.util.ElementObject;
 
 import java.io.InputStream;
@@ -19,32 +20,33 @@ import java.util.Set;
 public class ElementRegistry {
 
     private static final ElementRegistry instance = new ElementRegistry();
-
+    private static final String jsonLocation = "/assets/tnkchem2/data/elements.json";
     private Set<ElementObject> elementObjects;
 
-    public static ElementRegistry getInstance(){
-        return instance;
-    }
-
-    private ElementRegistry(){
+    private ElementRegistry() {
 
         elementObjects = new HashSet<ElementObject>();
 
         Set<Map.Entry<String, JsonElement>> elementRaw = getElementsJson();
         Gson gson = new Gson();
 
-        for (Map.Entry<String, JsonElement> entry : elementRaw){
-            ElementObject element = gson.fromJson(entry.getValue(),ElementObject.class);
-            System.out.println("Element " + entry.getKey() + " stored with data {" + element + "}");
+        for (Map.Entry<String, JsonElement> entry : elementRaw) {
+            ElementObject element = gson.fromJson(entry.getValue(), ElementObject.class);
+            LogHandler.all("Element " + entry.getKey() + " stored with data {" + element + "}");
 
-            if(Integer.parseInt(entry.getKey()) != Integer.parseInt(element.getZ())){
-                System.err.println("ERROR!! Check Element " + element + " registered as " + entry.getKey());
+            if (Integer.parseInt(entry.getKey()) != Integer.parseInt(element.getZ())) {
+                LogHandler.error("ERROR!! Check Element " + element + " registered as " + entry.getKey());
+                LogHandler.error(element.getName() + " has not been added ElementRegistry to avoid conflicts");
+                LogHandler.error("Please contact the mod author to resolve this issue");
+            } else {
+                elementObjects.add(element);
             }
-
         }
     }
 
-    private static final String jsonLocation = "/assets/tnkchem2/data/elements.json";
+    public static ElementRegistry getInstance(){
+        return instance;
+    }
 
     private static Set<Map.Entry<String, JsonElement>> getElementsJson() {
         InputStream is = ElementRegistry.class.getResourceAsStream(jsonLocation);
