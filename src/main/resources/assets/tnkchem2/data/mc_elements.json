@@ -1,0 +1,2769 @@
+[
+  {
+    "index": 0,
+    "mc_name": "tile.air",
+    "elements": [
+      "O",
+      "CO2",
+      "Ar"
+    ]
+  },
+  {
+    "index": 1,
+    "mc_name": "tile.stone",
+    "elements": [
+      "Si02",
+      "Al2O3",
+      "K2O",
+      "Na2O",
+      "CaO",
+      "MgO",
+      "KAlSi3O8"
+    ]
+  },
+  {
+    "index": 2,
+    "mc_name": "tile.grass",
+    "elements": [
+      "C",
+      "H2O",
+      "C6H12O6"
+    ]
+  },
+  {
+    "index": 3,
+    "mc_name": "tile.dirt",
+    "elements": [
+      "SiO2",
+      "CaCO3",
+      "H20",
+      "C2",
+      "KAlSi3O8"
+    ]
+  },
+  {
+    "index": 4,
+    "mc_name": "tile.stonebrick",
+    "elements": []
+  },
+  {
+    "index": 5,
+    "mc_name": "tile.wood",
+    "elements": [
+      "C2",
+      "H20",
+      "O2",
+      "N2"
+    ]
+  },
+  {
+    "index": 6,
+    "mc_name": "tile.sapling",
+    "elements": [
+      "C6H12O6",
+      "C2",
+      "H20",
+      "O2",
+      "N2",
+      "CO2"
+    ]
+  },
+  {
+    "index": 7,
+    "mc_name": "tile.bedrock",
+    "elements": [
+      "Cn50",
+      "Rg50",
+      "Ds50",
+      "Mt50",
+      "Hs50",
+      "Bh50",
+      "Sg50",
+      "Db50",
+      "Rf50",
+      "Lr50",
+      "No50",
+      "Md50",
+      "Fm50"
+    ]
+  },
+  {
+    "index": 8,
+    "mc_name": "tile.water",
+    "elements": ["H2O"]
+  },
+  {
+    "index": 9,
+    "mc_name": "tile.water",
+    "elements": ["H20"]
+  },
+  {
+    "index": 10,
+    "mc_name": "tile.lava",
+    "elements": [
+      "S2",
+      "Si02",
+      "Al2O3",
+      "K2O",
+      "Na2O",
+      "CaO",
+      "MgO"
+    ]
+  },
+  {
+    "index": 11,
+    "mc_name": "tile.lava",
+    "elements": [
+      "S2",
+      "Si02",
+      "Al2O3",
+      "K2O",
+      "Na2O",
+      "CaO",
+      "MgO"
+    ]
+  },
+  {
+    "index": 12,
+    "mc_name": "tile.sand",
+    "elements": [
+      "SiO2",
+      "CaO",
+      "MgO",
+      "KAlSi3O8"
+    ]
+  },
+  {
+    "index": 13,
+    "mc_name": "tile.gravel",
+    "elements": [
+      "Si02",
+      "Al2O3",
+      "K2O",
+      "Na2O",
+      "CaO",
+      "MgO",
+      "KAlSi3O8"
+    ]
+  },
+  {
+    "index": 14,
+    "mc_name": "tile.oreGold",
+    "elements": [
+      "@tile.stone",
+      "Au10"
+    ]
+  },
+  {
+    "index": 15,
+    "mc_name": "tile.oreIron",
+    "elements": [
+      "@tile.stone",
+      "Fe10"
+    ]
+  },
+  {
+    "index": 16,
+    "mc_name": "tile.oreCoal",
+    "elements": [
+      "@tile.stone",
+      "C15"
+    ]
+  },
+  {
+    "index": 17,
+    "mc_name": "tile.log",
+    "elements": ["@tile.wood"]
+  },
+  {
+    "index": 18,
+    "mc_name": "tile.leaves",
+    "elements": ["@tile.sapling"]
+  },
+  {
+    "index": 19,
+    "mc_name": "tile.sponge",
+    "elements": []
+  },
+  {
+    "index": 20,
+    "mc_name": "tile.glass",
+    "elements": ["@tile.sand"]
+  },
+  {
+    "index": 21,
+    "mc_name": "tile.oreLapis",
+    "elements": [
+      "@tile.stone",
+      "Na8Ca8Al6Si6O32S4Cl2"
+    ]
+  },
+  {
+    "index": 22,
+    "mc_name": "tile.blockLapis",
+    "elements": ["Na8Ca8Al6Si6O32S4Cl2"]
+  },
+  {
+    "index": 23,
+    "mc_name": "tile.dispenser",
+    "elements": []
+  },
+  {
+    "index": 24,
+    "mc_name": "tile.sandStone",
+    "elements": [
+      "@tile.sand",
+      "@tile.stone"
+    ]
+  },
+  {
+    "index": 25,
+    "mc_name": "tile.musicBlock",
+    "elements": []
+  },
+  {
+    "index": 26,
+    "mc_name": "tile.bed",
+    "elements": []
+  },
+  {
+    "index": 27,
+    "mc_name": "tile.goldenRail",
+    "elements": []
+  },
+  {
+    "index": 28,
+    "mc_name": "tile.detectorRail",
+    "elements": []
+  },
+  {
+    "index": 29,
+    "mc_name": "tile.pistonStickyBase",
+    "elements": []
+  },
+  {
+    "index": 30,
+    "mc_name": "tile.web",
+    "elements": []
+  },
+  {
+    "index": 31,
+    "mc_name": "tile.tallgrass",
+    "elements": ["@tile.sapling"]
+  },
+  {
+    "index": 32,
+    "mc_name": "tile.deadbush",
+    "elements": ["C2"]
+  },
+  {
+    "index": 33,
+    "mc_name": "tile.pistonBase",
+    "elements": []
+  },
+  {
+    "index": 34,
+    "mc_name": "tile.null",
+    "elements": ["H"]
+  },
+  {
+    "index": 35,
+    "mc_name": "tile.cloth",
+    "elements": ["C10H3O2N5S"]
+  },
+  {
+    "index": 36,
+    "mc_name": "tile.null",
+    "elements": ["H"]
+  },
+  {
+    "index": 37,
+    "mc_name": "tile.flower1",
+    "elements": [""]
+  },
+  {
+    "index": 38,
+    "mc_name": "tile.flower2",
+    "elements": []
+  },
+  {
+    "index": 39,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 40,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 41,
+    "mc_name": "tile.blockGold",
+    "elements": []
+  },
+  {
+    "index": 42,
+    "mc_name": "tile.blockIron",
+    "elements": []
+  },
+  {
+    "index": 43,
+    "mc_name": "tile.stoneSlab",
+    "elements": []
+  },
+  {
+    "index": 44,
+    "mc_name": "tile.stoneSlab",
+    "elements": []
+  },
+  {
+    "index": 45,
+    "mc_name": "tile.brick",
+    "elements": []
+  },
+  {
+    "index": 46,
+    "mc_name": "tile.tnt",
+    "elements": []
+  },
+  {
+    "index": 47,
+    "mc_name": "tile.bookshelf",
+    "elements": []
+  },
+  {
+    "index": 48,
+    "mc_name": "tile.stoneMoss",
+    "elements": []
+  },
+  {
+    "index": 49,
+    "mc_name": "tile.obsidian",
+    "elements": []
+  },
+  {
+    "index": 50,
+    "mc_name": "tile.torch",
+    "elements": []
+  },
+  {
+    "index": 51,
+    "mc_name": "tile.fire",
+    "elements": []
+  },
+  {
+    "index": 52,
+    "mc_name": "tile.mobSpawner",
+    "elements": []
+  },
+  {
+    "index": 53,
+    "mc_name": "tile.stairsWood",
+    "elements": []
+  },
+  {
+    "index": 54,
+    "mc_name": "tile.chest",
+    "elements": []
+  },
+  {
+    "index": 55,
+    "mc_name": "tile.redstoneDust",
+    "elements": []
+  },
+  {
+    "index": 56,
+    "mc_name": "tile.oreDiamond",
+    "elements": []
+  },
+  {
+    "index": 57,
+    "mc_name": "tile.blockDiamond",
+    "elements": []
+  },
+  {
+    "index": 58,
+    "mc_name": "tile.workbench",
+    "elements": []
+  },
+  {
+    "index": 59,
+    "mc_name": "tile.crops",
+    "elements": []
+  },
+  {
+    "index": 60,
+    "mc_name": "tile.farmland",
+    "elements": []
+  },
+  {
+    "index": 61,
+    "mc_name": "tile.furnace",
+    "elements": []
+  },
+  {
+    "index": 62,
+    "mc_name": "tile.furnace",
+    "elements": []
+  },
+  {
+    "index": 63,
+    "mc_name": "tile.sign",
+    "elements": []
+  },
+  {
+    "index": 64,
+    "mc_name": "tile.doorOak",
+    "elements": []
+  },
+  {
+    "index": 65,
+    "mc_name": "tile.ladder",
+    "elements": []
+  },
+  {
+    "index": 66,
+    "mc_name": "tile.rail",
+    "elements": []
+  },
+  {
+    "index": 67,
+    "mc_name": "tile.stairsStone",
+    "elements": []
+  },
+  {
+    "index": 68,
+    "mc_name": "tile.sign",
+    "elements": []
+  },
+  {
+    "index": 69,
+    "mc_name": "tile.lever",
+    "elements": []
+  },
+  {
+    "index": 70,
+    "mc_name": "tile.pressurePlateStone",
+    "elements": []
+  },
+  {
+    "index": 71,
+    "mc_name": "tile.doorIron",
+    "elements": []
+  },
+  {
+    "index": 72,
+    "mc_name": "tile.pressurePlateWood",
+    "elements": []
+  },
+  {
+    "index": 73,
+    "mc_name": "tile.oreRedstone",
+    "elements": []
+  },
+  {
+    "index": 74,
+    "mc_name": "tile.oreRedstone",
+    "elements": []
+  },
+  {
+    "index": 75,
+    "mc_name": "tile.notGate",
+    "elements": []
+  },
+  {
+    "index": 76,
+    "mc_name": "tile.notGate",
+    "elements": []
+  },
+  {
+    "index": 77,
+    "mc_name": "tile.button",
+    "elements": []
+  },
+  {
+    "index": 78,
+    "mc_name": "tile.snow",
+    "elements": []
+  },
+  {
+    "index": 79,
+    "mc_name": "tile.ice",
+    "elements": []
+  },
+  {
+    "index": 80,
+    "mc_name": "tile.snow",
+    "elements": []
+  },
+  {
+    "index": 81,
+    "mc_name": "tile.cactus",
+    "elements": []
+  },
+  {
+    "index": 82,
+    "mc_name": "tile.clay",
+    "elements": []
+  },
+  {
+    "index": 83,
+    "mc_name": "tile.reeds",
+    "elements": []
+  },
+  {
+    "index": 84,
+    "mc_name": "tile.jukebox",
+    "elements": []
+  },
+  {
+    "index": 85,
+    "mc_name": "tile.fence",
+    "elements": []
+  },
+  {
+    "index": 86,
+    "mc_name": "tile.pumpkin",
+    "elements": []
+  },
+  {
+    "index": 87,
+    "mc_name": "tile.hellrock",
+    "elements": []
+  },
+  {
+    "index": 88,
+    "mc_name": "tile.hellsand",
+    "elements": []
+  },
+  {
+    "index": 89,
+    "mc_name": "tile.lightgem",
+    "elements": []
+  },
+  {
+    "index": 90,
+    "mc_name": "tile.portal",
+    "elements": []
+  },
+  {
+    "index": 91,
+    "mc_name": "tile.litpumpkin",
+    "elements": []
+  },
+  {
+    "index": 92,
+    "mc_name": "tile.cake",
+    "elements": []
+  },
+  {
+    "index": 93,
+    "mc_name": "tile.diode",
+    "elements": []
+  },
+  {
+    "index": 94,
+    "mc_name": "tile.diode",
+    "elements": []
+  },
+  {
+    "index": 95,
+    "mc_name": "tile.stainedGlass",
+    "elements": []
+  },
+  {
+    "index": 96,
+    "mc_name": "tile.trapdoor",
+    "elements": []
+  },
+  {
+    "index": 97,
+    "mc_name": "tile.monsterStoneEgg",
+    "elements": []
+  },
+  {
+    "index": 98,
+    "mc_name": "tile.stonebricksmooth",
+    "elements": []
+  },
+  {
+    "index": 99,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 100,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 101,
+    "mc_name": "tile.fenceIron",
+    "elements": []
+  },
+  {
+    "index": 102,
+    "mc_name": "tile.thinGlass",
+    "elements": []
+  },
+  {
+    "index": 103,
+    "mc_name": "tile.melon",
+    "elements": []
+  },
+  {
+    "index": 104,
+    "mc_name": "tile.pumpkinStem",
+    "elements": []
+  },
+  {
+    "index": 105,
+    "mc_name": "tile.pumpkinStem",
+    "elements": []
+  },
+  {
+    "index": 106,
+    "mc_name": "tile.vine",
+    "elements": []
+  },
+  {
+    "index": 107,
+    "mc_name": "tile.fenceGate",
+    "elements": []
+  },
+  {
+    "index": 108,
+    "mc_name": "tile.stairsBrick",
+    "elements": []
+  },
+  {
+    "index": 109,
+    "mc_name": "tile.stairsStoneBrickSmooth",
+    "elements": []
+  },
+  {
+    "index": 110,
+    "mc_name": "tile.mycel",
+    "elements": []
+  },
+  {
+    "index": 111,
+    "mc_name": "tile.waterlily",
+    "elements": []
+  },
+  {
+    "index": 112,
+    "mc_name": "tile.netherBrick",
+    "elements": []
+  },
+  {
+    "index": 113,
+    "mc_name": "tile.netherFence",
+    "elements": []
+  },
+  {
+    "index": 114,
+    "mc_name": "tile.stairsNetherBrick",
+    "elements": []
+  },
+  {
+    "index": 115,
+    "mc_name": "tile.netherStalk",
+    "elements": []
+  },
+  {
+    "index": 116,
+    "mc_name": "tile.enchantmentTable",
+    "elements": []
+  },
+  {
+    "index": 117,
+    "mc_name": "tile.brewingStand",
+    "elements": []
+  },
+  {
+    "index": 118,
+    "mc_name": "tile.cauldron",
+    "elements": []
+  },
+  {
+    "index": 119,
+    "mc_name": "tile.null",
+    "elements": []
+  },
+  {
+    "index": 120,
+    "mc_name": "tile.endPortalFrame",
+    "elements": []
+  },
+  {
+    "index": 121,
+    "mc_name": "tile.whiteStone",
+    "elements": []
+  },
+  {
+    "index": 122,
+    "mc_name": "tile.dragonEgg",
+    "elements": []
+  },
+  {
+    "index": 123,
+    "mc_name": "tile.redstoneLight",
+    "elements": []
+  },
+  {
+    "index": 124,
+    "mc_name": "tile.redstoneLight",
+    "elements": []
+  },
+  {
+    "index": 125,
+    "mc_name": "tile.woodSlab",
+    "elements": []
+  },
+  {
+    "index": 126,
+    "mc_name": "tile.woodSlab",
+    "elements": []
+  },
+  {
+    "index": 127,
+    "mc_name": "tile.cocoa",
+    "elements": []
+  },
+  {
+    "index": 128,
+    "mc_name": "tile.stairsSandStone",
+    "elements": []
+  },
+  {
+    "index": 129,
+    "mc_name": "tile.oreEmerald",
+    "elements": []
+  },
+  {
+    "index": 130,
+    "mc_name": "tile.enderChest",
+    "elements": []
+  },
+  {
+    "index": 131,
+    "mc_name": "tile.tripWireSource",
+    "elements": []
+  },
+  {
+    "index": 132,
+    "mc_name": "tile.tripWire",
+    "elements": []
+  },
+  {
+    "index": 133,
+    "mc_name": "tile.blockEmerald",
+    "elements": []
+  },
+  {
+    "index": 134,
+    "mc_name": "tile.stairsWoodSpruce",
+    "elements": []
+  },
+  {
+    "index": 135,
+    "mc_name": "tile.stairsWoodBirch",
+    "elements": []
+  },
+  {
+    "index": 136,
+    "mc_name": "tile.stairsWoodJungle",
+    "elements": []
+  },
+  {
+    "index": 137,
+    "mc_name": "tile.commandBlock",
+    "elements": []
+  },
+  {
+    "index": 138,
+    "mc_name": "tile.beacon",
+    "elements": []
+  },
+  {
+    "index": 139,
+    "mc_name": "tile.cobbleWall",
+    "elements": []
+  },
+  {
+    "index": 140,
+    "mc_name": "tile.flowerPot",
+    "elements": []
+  },
+  {
+    "index": 141,
+    "mc_name": "tile.carrots",
+    "elements": []
+  },
+  {
+    "index": 142,
+    "mc_name": "tile.potatoes",
+    "elements": []
+  },
+  {
+    "index": 143,
+    "mc_name": "tile.button",
+    "elements": []
+  },
+  {
+    "index": 144,
+    "mc_name": "tile.skull",
+    "elements": []
+  },
+  {
+    "index": 145,
+    "mc_name": "tile.anvil",
+    "elements": []
+  },
+  {
+    "index": 146,
+    "mc_name": "tile.chestTrap",
+    "elements": []
+  },
+  {
+    "index": 147,
+    "mc_name": "tile.weightedPlate_light",
+    "elements": []
+  },
+  {
+    "index": 148,
+    "mc_name": "tile.weightedPlate_heavy",
+    "elements": []
+  },
+  {
+    "index": 149,
+    "mc_name": "tile.comparator",
+    "elements": []
+  },
+  {
+    "index": 150,
+    "mc_name": "tile.comparator",
+    "elements": []
+  },
+  {
+    "index": 151,
+    "mc_name": "tile.daylightDetector",
+    "elements": []
+  },
+  {
+    "index": 152,
+    "mc_name": "tile.blockRedstone",
+    "elements": []
+  },
+  {
+    "index": 153,
+    "mc_name": "tile.netherquartz",
+    "elements": []
+  },
+  {
+    "index": 154,
+    "mc_name": "tile.hopper",
+    "elements": []
+  },
+  {
+    "index": 155,
+    "mc_name": "tile.quartzBlock",
+    "elements": []
+  },
+  {
+    "index": 156,
+    "mc_name": "tile.stairsQuartz",
+    "elements": []
+  },
+  {
+    "index": 157,
+    "mc_name": "tile.activatorRail",
+    "elements": []
+  },
+  {
+    "index": 158,
+    "mc_name": "tile.dropper",
+    "elements": []
+  },
+  {
+    "index": 159,
+    "mc_name": "tile.clayHardenedStained",
+    "elements": []
+  },
+  {
+    "index": 160,
+    "mc_name": "tile.thinStainedGlass",
+    "elements": []
+  },
+  {
+    "index": 161,
+    "mc_name": "tile.leaves",
+    "elements": []
+  },
+  {
+    "index": 162,
+    "mc_name": "tile.log",
+    "elements": []
+  },
+  {
+    "index": 163,
+    "mc_name": "tile.stairsWoodAcacia",
+    "elements": []
+  },
+  {
+    "index": 164,
+    "mc_name": "tile.stairsWoodDarkOak",
+    "elements": []
+  },
+  {
+    "index": 165,
+    "mc_name": "tile.slime",
+    "elements": []
+  },
+  {
+    "index": 166,
+    "mc_name": "tile.barrier",
+    "elements": []
+  },
+  {
+    "index": 167,
+    "mc_name": "tile.ironTrapdoor",
+    "elements": []
+  },
+  {
+    "index": 168,
+    "mc_name": "tile.prismarine",
+    "elements": []
+  },
+  {
+    "index": 169,
+    "mc_name": "tile.seaLantern",
+    "elements": []
+  },
+  {
+    "index": 170,
+    "mc_name": "tile.hayBlock",
+    "elements": []
+  },
+  {
+    "index": 171,
+    "mc_name": "tile.woolCarpet",
+    "elements": []
+  },
+  {
+    "index": 172,
+    "mc_name": "tile.clayHardened",
+    "elements": []
+  },
+  {
+    "index": 173,
+    "mc_name": "tile.blockCoal",
+    "elements": []
+  },
+  {
+    "index": 174,
+    "mc_name": "tile.icePacked",
+    "elements": []
+  },
+  {
+    "index": 175,
+    "mc_name": "tile.doublePlant",
+    "elements": []
+  },
+  {
+    "index": 176,
+    "mc_name": "tile.banner",
+    "elements": []
+  },
+  {
+    "index": 177,
+    "mc_name": "tile.banner",
+    "elements": []
+  },
+  {
+    "index": 178,
+    "mc_name": "tile.daylightDetector",
+    "elements": []
+  },
+  {
+    "index": 179,
+    "mc_name": "tile.redSandStone",
+    "elements": []
+  },
+  {
+    "index": 180,
+    "mc_name": "tile.stairsRedSandStone",
+    "elements": []
+  },
+  {
+    "index": 181,
+    "mc_name": "tile.stoneSlab2",
+    "elements": []
+  },
+  {
+    "index": 182,
+    "mc_name": "tile.stoneSlab2",
+    "elements": []
+  },
+  {
+    "index": 183,
+    "mc_name": "tile.spruceFenceGate",
+    "elements": []
+  },
+  {
+    "index": 184,
+    "mc_name": "tile.birchFenceGate",
+    "elements": []
+  },
+  {
+    "index": 185,
+    "mc_name": "tile.jungleFenceGate",
+    "elements": []
+  },
+  {
+    "index": 186,
+    "mc_name": "tile.darkOakFenceGate",
+    "elements": []
+  },
+  {
+    "index": 187,
+    "mc_name": "tile.acaciaFenceGate",
+    "elements": []
+  },
+  {
+    "index": 188,
+    "mc_name": "tile.spruceFence",
+    "elements": []
+  },
+  {
+    "index": 189,
+    "mc_name": "tile.birchFence",
+    "elements": []
+  },
+  {
+    "index": 190,
+    "mc_name": "tile.jungleFence",
+    "elements": []
+  },
+  {
+    "index": 191,
+    "mc_name": "tile.darkOakFence",
+    "elements": []
+  },
+  {
+    "index": 192,
+    "mc_name": "tile.acaciaFence",
+    "elements": []
+  },
+  {
+    "index": 193,
+    "mc_name": "tile.doorSpruce",
+    "elements": []
+  },
+  {
+    "index": 194,
+    "mc_name": "tile.doorBirch",
+    "elements": []
+  },
+  {
+    "index": 195,
+    "mc_name": "tile.doorJungle",
+    "elements": []
+  },
+  {
+    "index": 196,
+    "mc_name": "tile.doorAcacia",
+    "elements": []
+  },
+  {
+    "index": 197,
+    "mc_name": "tile.doorDarkOak",
+    "elements": []
+  },
+  {
+    "index": 198,
+    "mc_name": "tile.stone",
+    "elements": []
+  },
+  {
+    "index": 199,
+    "mc_name": "tile.grass",
+    "elements": []
+  },
+  {
+    "index": 200,
+    "mc_name": "tile.dirt",
+    "elements": []
+  },
+  {
+    "index": 201,
+    "mc_name": "tile.stonebrick",
+    "elements": []
+  },
+  {
+    "index": 202,
+    "mc_name": "tile.wood",
+    "elements": []
+  },
+  {
+    "index": 203,
+    "mc_name": "tile.sapling",
+    "elements": []
+  },
+  {
+    "index": 204,
+    "mc_name": "tile.bedrock",
+    "elements": []
+  },
+  {
+    "index": 205,
+    "mc_name": "tile.sand",
+    "elements": []
+  },
+  {
+    "index": 206,
+    "mc_name": "tile.gravel",
+    "elements": []
+  },
+  {
+    "index": 207,
+    "mc_name": "tile.oreGold",
+    "elements": []
+  },
+  {
+    "index": 208,
+    "mc_name": "tile.oreIron",
+    "elements": []
+  },
+  {
+    "index": 209,
+    "mc_name": "tile.oreCoal",
+    "elements": []
+  },
+  {
+    "index": 210,
+    "mc_name": "tile.log",
+    "elements": []
+  },
+  {
+    "index": 211,
+    "mc_name": "tile.leaves",
+    "elements": []
+  },
+  {
+    "index": 212,
+    "mc_name": "tile.sponge",
+    "elements": []
+  },
+  {
+    "index": 213,
+    "mc_name": "tile.glass",
+    "elements": []
+  },
+  {
+    "index": 214,
+    "mc_name": "tile.oreLapis",
+    "elements": []
+  },
+  {
+    "index": 215,
+    "mc_name": "tile.blockLapis",
+    "elements": []
+  },
+  {
+    "index": 216,
+    "mc_name": "tile.dispenser",
+    "elements": []
+  },
+  {
+    "index": 217,
+    "mc_name": "tile.sandStone",
+    "elements": []
+  },
+  {
+    "index": 218,
+    "mc_name": "tile.musicBlock",
+    "elements": []
+  },
+  {
+    "index": 219,
+    "mc_name": "tile.goldenRail",
+    "elements": []
+  },
+  {
+    "index": 220,
+    "mc_name": "tile.detectorRail",
+    "elements": []
+  },
+  {
+    "index": 221,
+    "mc_name": "tile.pistonStickyBase",
+    "elements": []
+  },
+  {
+    "index": 222,
+    "mc_name": "tile.web",
+    "elements": []
+  },
+  {
+    "index": 223,
+    "mc_name": "tile.tallgrass",
+    "elements": []
+  },
+  {
+    "index": 224,
+    "mc_name": "tile.deadbush",
+    "elements": []
+  },
+  {
+    "index": 225,
+    "mc_name": "tile.pistonBase",
+    "elements": []
+  },
+  {
+    "index": 226,
+    "mc_name": "tile.cloth",
+    "elements": []
+  },
+  {
+    "index": 227,
+    "mc_name": "tile.flower1",
+    "elements": []
+  },
+  {
+    "index": 228,
+    "mc_name": "tile.flower2",
+    "elements": []
+  },
+  {
+    "index": 229,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 230,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 231,
+    "mc_name": "tile.blockGold",
+    "elements": []
+  },
+  {
+    "index": 232,
+    "mc_name": "tile.blockIron",
+    "elements": []
+  },
+  {
+    "index": 233,
+    "mc_name": "tile.stoneSlab",
+    "elements": []
+  },
+  {
+    "index": 234,
+    "mc_name": "tile.brick",
+    "elements": []
+  },
+  {
+    "index": 235,
+    "mc_name": "tile.tnt",
+    "elements": []
+  },
+  {
+    "index": 236,
+    "mc_name": "tile.bookshelf",
+    "elements": []
+  },
+  {
+    "index": 237,
+    "mc_name": "tile.stoneMoss",
+    "elements": []
+  },
+  {
+    "index": 238,
+    "mc_name": "tile.obsidian",
+    "elements": []
+  },
+  {
+    "index": 239,
+    "mc_name": "tile.torch",
+    "elements": []
+  },
+  {
+    "index": 240,
+    "mc_name": "tile.mobSpawner",
+    "elements": []
+  },
+  {
+    "index": 241,
+    "mc_name": "tile.stairsWood",
+    "elements": []
+  },
+  {
+    "index": 242,
+    "mc_name": "tile.chest",
+    "elements": []
+  },
+  {
+    "index": 243,
+    "mc_name": "tile.oreDiamond",
+    "elements": []
+  },
+  {
+    "index": 244,
+    "mc_name": "tile.blockDiamond",
+    "elements": []
+  },
+  {
+    "index": 245,
+    "mc_name": "tile.workbench",
+    "elements": []
+  },
+  {
+    "index": 246,
+    "mc_name": "tile.farmland",
+    "elements": []
+  },
+  {
+    "index": 247,
+    "mc_name": "tile.furnace",
+    "elements": []
+  },
+  {
+    "index": 248,
+    "mc_name": "tile.furnace",
+    "elements": []
+  },
+  {
+    "index": 249,
+    "mc_name": "tile.ladder",
+    "elements": []
+  },
+  {
+    "index": 250,
+    "mc_name": "tile.rail",
+    "elements": []
+  },
+  {
+    "index": 251,
+    "mc_name": "tile.stairsStone",
+    "elements": []
+  },
+  {
+    "index": 252,
+    "mc_name": "tile.lever",
+    "elements": []
+  },
+  {
+    "index": 253,
+    "mc_name": "tile.pressurePlateStone",
+    "elements": []
+  },
+  {
+    "index": 254,
+    "mc_name": "tile.pressurePlateWood",
+    "elements": []
+  },
+  {
+    "index": 255,
+    "mc_name": "tile.oreRedstone",
+    "elements": []
+  },
+  {
+    "index": 256,
+    "mc_name": "tile.notGate",
+    "elements": []
+  },
+  {
+    "index": 257,
+    "mc_name": "tile.button",
+    "elements": []
+  },
+  {
+    "index": 258,
+    "mc_name": "tile.snow",
+    "elements": []
+  },
+  {
+    "index": 259,
+    "mc_name": "tile.ice",
+    "elements": []
+  },
+  {
+    "index": 260,
+    "mc_name": "tile.snow",
+    "elements": []
+  },
+  {
+    "index": 261,
+    "mc_name": "tile.cactus",
+    "elements": []
+  },
+  {
+    "index": 262,
+    "mc_name": "tile.clay",
+    "elements": []
+  },
+  {
+    "index": 263,
+    "mc_name": "tile.jukebox",
+    "elements": []
+  },
+  {
+    "index": 264,
+    "mc_name": "tile.fence",
+    "elements": []
+  },
+  {
+    "index": 265,
+    "mc_name": "tile.pumpkin",
+    "elements": []
+  },
+  {
+    "index": 266,
+    "mc_name": "tile.hellrock",
+    "elements": []
+  },
+  {
+    "index": 267,
+    "mc_name": "tile.hellsand",
+    "elements": []
+  },
+  {
+    "index": 268,
+    "mc_name": "tile.lightgem",
+    "elements": []
+  },
+  {
+    "index": 269,
+    "mc_name": "tile.litpumpkin",
+    "elements": []
+  },
+  {
+    "index": 270,
+    "mc_name": "tile.stainedGlass",
+    "elements": []
+  },
+  {
+    "index": 271,
+    "mc_name": "tile.trapdoor",
+    "elements": []
+  },
+  {
+    "index": 272,
+    "mc_name": "tile.monsterStoneEgg",
+    "elements": []
+  },
+  {
+    "index": 273,
+    "mc_name": "tile.stonebricksmooth",
+    "elements": []
+  },
+  {
+    "index": 274,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 275,
+    "mc_name": "tile.mushroom",
+    "elements": []
+  },
+  {
+    "index": 276,
+    "mc_name": "tile.fenceIron",
+    "elements": []
+  },
+  {
+    "index": 277,
+    "mc_name": "tile.thinGlass",
+    "elements": []
+  },
+  {
+    "index": 278,
+    "mc_name": "tile.melon",
+    "elements": []
+  },
+  {
+    "index": 279,
+    "mc_name": "tile.vine",
+    "elements": []
+  },
+  {
+    "index": 280,
+    "mc_name": "tile.fenceGate",
+    "elements": []
+  },
+  {
+    "index": 281,
+    "mc_name": "tile.stairsBrick",
+    "elements": []
+  },
+  {
+    "index": 282,
+    "mc_name": "tile.stairsStoneBrickSmooth",
+    "elements": []
+  },
+  {
+    "index": 283,
+    "mc_name": "tile.mycel",
+    "elements": []
+  },
+  {
+    "index": 284,
+    "mc_name": "tile.waterlily",
+    "elements": []
+  },
+  {
+    "index": 285,
+    "mc_name": "tile.netherBrick",
+    "elements": []
+  },
+  {
+    "index": 286,
+    "mc_name": "tile.netherFence",
+    "elements": []
+  },
+  {
+    "index": 287,
+    "mc_name": "tile.stairsNetherBrick",
+    "elements": []
+  },
+  {
+    "index": 288,
+    "mc_name": "tile.enchantmentTable",
+    "elements": []
+  },
+  {
+    "index": 289,
+    "mc_name": "tile.endPortalFrame",
+    "elements": []
+  },
+  {
+    "index": 290,
+    "mc_name": "tile.whiteStone",
+    "elements": []
+  },
+  {
+    "index": 291,
+    "mc_name": "tile.dragonEgg",
+    "elements": []
+  },
+  {
+    "index": 292,
+    "mc_name": "tile.redstoneLight",
+    "elements": []
+  },
+  {
+    "index": 293,
+    "mc_name": "tile.woodSlab",
+    "elements": []
+  },
+  {
+    "index": 294,
+    "mc_name": "tile.stairsSandStone",
+    "elements": []
+  },
+  {
+    "index": 295,
+    "mc_name": "tile.oreEmerald",
+    "elements": []
+  },
+  {
+    "index": 296,
+    "mc_name": "tile.enderChest",
+    "elements": []
+  },
+  {
+    "index": 297,
+    "mc_name": "tile.tripWireSource",
+    "elements": []
+  },
+  {
+    "index": 298,
+    "mc_name": "tile.blockEmerald",
+    "elements": []
+  },
+  {
+    "index": 299,
+    "mc_name": "tile.stairsWoodSpruce",
+    "elements": []
+  },
+  {
+    "index": 300,
+    "mc_name": "tile.stairsWoodBirch",
+    "elements": []
+  },
+  {
+    "index": 301,
+    "mc_name": "tile.stairsWoodJungle",
+    "elements": []
+  },
+  {
+    "index": 302,
+    "mc_name": "tile.commandBlock",
+    "elements": []
+  },
+  {
+    "index": 303,
+    "mc_name": "tile.beacon",
+    "elements": []
+  },
+  {
+    "index": 304,
+    "mc_name": "tile.cobbleWall",
+    "elements": []
+  },
+  {
+    "index": 305,
+    "mc_name": "tile.button",
+    "elements": []
+  },
+  {
+    "index": 306,
+    "mc_name": "tile.anvil",
+    "elements": []
+  },
+  {
+    "index": 307,
+    "mc_name": "tile.chestTrap",
+    "elements": []
+  },
+  {
+    "index": 308,
+    "mc_name": "tile.weightedPlate_light",
+    "elements": []
+  },
+  {
+    "index": 309,
+    "mc_name": "tile.weightedPlate_heavy",
+    "elements": []
+  },
+  {
+    "index": 310,
+    "mc_name": "tile.daylightDetector",
+    "elements": []
+  },
+  {
+    "index": 311,
+    "mc_name": "tile.blockRedstone",
+    "elements": []
+  },
+  {
+    "index": 312,
+    "mc_name": "tile.netherquartz",
+    "elements": []
+  },
+  {
+    "index": 313,
+    "mc_name": "tile.hopper",
+    "elements": []
+  },
+  {
+    "index": 314,
+    "mc_name": "tile.quartzBlock",
+    "elements": []
+  },
+  {
+    "index": 315,
+    "mc_name": "tile.stairsQuartz",
+    "elements": []
+  },
+  {
+    "index": 316,
+    "mc_name": "tile.activatorRail",
+    "elements": []
+  },
+  {
+    "index": 317,
+    "mc_name": "tile.dropper",
+    "elements": []
+  },
+  {
+    "index": 318,
+    "mc_name": "tile.clayHardenedStained",
+    "elements": []
+  },
+  {
+    "index": 319,
+    "mc_name": "tile.thinStainedGlass",
+    "elements": []
+  },
+  {
+    "index": 320,
+    "mc_name": "tile.leaves",
+    "elements": []
+  },
+  {
+    "index": 321,
+    "mc_name": "tile.log",
+    "elements": []
+  },
+  {
+    "index": 322,
+    "mc_name": "tile.stairsWoodAcacia",
+    "elements": []
+  },
+  {
+    "index": 323,
+    "mc_name": "tile.stairsWoodDarkOak",
+    "elements": []
+  },
+  {
+    "index": 324,
+    "mc_name": "tile.slime",
+    "elements": []
+  },
+  {
+    "index": 325,
+    "mc_name": "tile.barrier",
+    "elements": []
+  },
+  {
+    "index": 326,
+    "mc_name": "tile.ironTrapdoor",
+    "elements": []
+  },
+  {
+    "index": 327,
+    "mc_name": "tile.prismarine",
+    "elements": []
+  },
+  {
+    "index": 328,
+    "mc_name": "tile.seaLantern",
+    "elements": []
+  },
+  {
+    "index": 329,
+    "mc_name": "tile.hayBlock",
+    "elements": []
+  },
+  {
+    "index": 330,
+    "mc_name": "tile.woolCarpet",
+    "elements": []
+  },
+  {
+    "index": 331,
+    "mc_name": "tile.clayHardened",
+    "elements": []
+  },
+  {
+    "index": 332,
+    "mc_name": "tile.blockCoal",
+    "elements": []
+  },
+  {
+    "index": 333,
+    "mc_name": "tile.icePacked",
+    "elements": []
+  },
+  {
+    "index": 334,
+    "mc_name": "tile.doublePlant",
+    "elements": []
+  },
+  {
+    "index": 335,
+    "mc_name": "tile.redSandStone",
+    "elements": []
+  },
+  {
+    "index": 336,
+    "mc_name": "tile.stairsRedSandStone",
+    "elements": []
+  },
+  {
+    "index": 337,
+    "mc_name": "tile.stoneSlab2",
+    "elements": []
+  },
+  {
+    "index": 338,
+    "mc_name": "tile.spruceFenceGate",
+    "elements": []
+  },
+  {
+    "index": 339,
+    "mc_name": "tile.birchFenceGate",
+    "elements": []
+  },
+  {
+    "index": 340,
+    "mc_name": "tile.jungleFenceGate",
+    "elements": []
+  },
+  {
+    "index": 341,
+    "mc_name": "tile.darkOakFenceGate",
+    "elements": []
+  },
+  {
+    "index": 342,
+    "mc_name": "tile.acaciaFenceGate",
+    "elements": []
+  },
+  {
+    "index": 343,
+    "mc_name": "tile.spruceFence",
+    "elements": []
+  },
+  {
+    "index": 344,
+    "mc_name": "tile.birchFence",
+    "elements": []
+  },
+  {
+    "index": 345,
+    "mc_name": "tile.jungleFence",
+    "elements": []
+  },
+  {
+    "index": 346,
+    "mc_name": "tile.darkOakFence",
+    "elements": []
+  },
+  {
+    "index": 347,
+    "mc_name": "tile.acaciaFence",
+    "elements": []
+  },
+  {
+    "index": 348,
+    "mc_name": "item.shovelIron",
+    "elements": []
+  },
+  {
+    "index": 349,
+    "mc_name": "item.pickaxeIron",
+    "elements": []
+  },
+  {
+    "index": 350,
+    "mc_name": "item.hatchetIron",
+    "elements": []
+  },
+  {
+    "index": 351,
+    "mc_name": "item.flintAndSteel",
+    "elements": []
+  },
+  {
+    "index": 352,
+    "mc_name": "item.apple",
+    "elements": []
+  },
+  {
+    "index": 353,
+    "mc_name": "item.bow",
+    "elements": []
+  },
+  {
+    "index": 354,
+    "mc_name": "item.arrow",
+    "elements": []
+  },
+  {
+    "index": 355,
+    "mc_name": "item.coal",
+    "elements": []
+  },
+  {
+    "index": 356,
+    "mc_name": "item.diamond",
+    "elements": []
+  },
+  {
+    "index": 357,
+    "mc_name": "item.ingotIron",
+    "elements": []
+  },
+  {
+    "index": 358,
+    "mc_name": "item.ingotGold",
+    "elements": []
+  },
+  {
+    "index": 359,
+    "mc_name": "item.swordIron",
+    "elements": []
+  },
+  {
+    "index": 360,
+    "mc_name": "item.swordWood",
+    "elements": []
+  },
+  {
+    "index": 361,
+    "mc_name": "item.shovelWood",
+    "elements": []
+  },
+  {
+    "index": 362,
+    "mc_name": "item.pickaxeWood",
+    "elements": []
+  },
+  {
+    "index": 363,
+    "mc_name": "item.hatchetWood",
+    "elements": []
+  },
+  {
+    "index": 364,
+    "mc_name": "item.swordStone",
+    "elements": []
+  },
+  {
+    "index": 365,
+    "mc_name": "item.shovelStone",
+    "elements": []
+  },
+  {
+    "index": 366,
+    "mc_name": "item.pickaxeStone",
+    "elements": []
+  },
+  {
+    "index": 367,
+    "mc_name": "item.hatchetStone",
+    "elements": []
+  },
+  {
+    "index": 368,
+    "mc_name": "item.swordDiamond",
+    "elements": []
+  },
+  {
+    "index": 369,
+    "mc_name": "item.shovelDiamond",
+    "elements": []
+  },
+  {
+    "index": 370,
+    "mc_name": "item.pickaxeDiamond",
+    "elements": []
+  },
+  {
+    "index": 371,
+    "mc_name": "item.hatchetDiamond",
+    "elements": []
+  },
+  {
+    "index": 372,
+    "mc_name": "item.stick",
+    "elements": []
+  },
+  {
+    "index": 373,
+    "mc_name": "item.bowl",
+    "elements": []
+  },
+  {
+    "index": 374,
+    "mc_name": "item.mushroomStew",
+    "elements": []
+  },
+  {
+    "index": 375,
+    "mc_name": "item.swordGold",
+    "elements": []
+  },
+  {
+    "index": 376,
+    "mc_name": "item.shovelGold",
+    "elements": []
+  },
+  {
+    "index": 377,
+    "mc_name": "item.pickaxeGold",
+    "elements": []
+  },
+  {
+    "index": 378,
+    "mc_name": "item.hatchetGold",
+    "elements": []
+  },
+  {
+    "index": 379,
+    "mc_name": "item.string",
+    "elements": []
+  },
+  {
+    "index": 380,
+    "mc_name": "item.feather",
+    "elements": []
+  },
+  {
+    "index": 381,
+    "mc_name": "item.sulphur",
+    "elements": []
+  },
+  {
+    "index": 382,
+    "mc_name": "item.hoeWood",
+    "elements": []
+  },
+  {
+    "index": 383,
+    "mc_name": "item.hoeStone",
+    "elements": []
+  },
+  {
+    "index": 384,
+    "mc_name": "item.hoeIron",
+    "elements": []
+  },
+  {
+    "index": 385,
+    "mc_name": "item.hoeDiamond",
+    "elements": []
+  },
+  {
+    "index": 386,
+    "mc_name": "item.hoeGold",
+    "elements": []
+  },
+  {
+    "index": 387,
+    "mc_name": "item.seeds",
+    "elements": []
+  },
+  {
+    "index": 388,
+    "mc_name": "item.wheat",
+    "elements": []
+  },
+  {
+    "index": 389,
+    "mc_name": "item.bread",
+    "elements": []
+  },
+  {
+    "index": 390,
+    "mc_name": "item.helmetCloth",
+    "elements": []
+  },
+  {
+    "index": 391,
+    "mc_name": "item.chestplateCloth",
+    "elements": []
+  },
+  {
+    "index": 392,
+    "mc_name": "item.leggingsCloth",
+    "elements": []
+  },
+  {
+    "index": 393,
+    "mc_name": "item.bootsCloth",
+    "elements": []
+  },
+  {
+    "index": 394,
+    "mc_name": "item.helmetChain",
+    "elements": []
+  },
+  {
+    "index": 395,
+    "mc_name": "item.chestplateChain",
+    "elements": []
+  },
+  {
+    "index": 396,
+    "mc_name": "item.leggingsChain",
+    "elements": []
+  },
+  {
+    "index": 397,
+    "mc_name": "item.bootsChain",
+    "elements": []
+  },
+  {
+    "index": 398,
+    "mc_name": "item.helmetIron",
+    "elements": []
+  },
+  {
+    "index": 399,
+    "mc_name": "item.chestplateIron",
+    "elements": []
+  },
+  {
+    "index": 400,
+    "mc_name": "item.leggingsIron",
+    "elements": []
+  },
+  {
+    "index": 401,
+    "mc_name": "item.bootsIron",
+    "elements": []
+  },
+  {
+    "index": 402,
+    "mc_name": "item.helmetDiamond",
+    "elements": []
+  },
+  {
+    "index": 403,
+    "mc_name": "item.chestplateDiamond",
+    "elements": []
+  },
+  {
+    "index": 404,
+    "mc_name": "item.leggingsDiamond",
+    "elements": []
+  },
+  {
+    "index": 405,
+    "mc_name": "item.bootsDiamond",
+    "elements": []
+  },
+  {
+    "index": 406,
+    "mc_name": "item.helmetGold",
+    "elements": []
+  },
+  {
+    "index": 407,
+    "mc_name": "item.chestplateGold",
+    "elements": []
+  },
+  {
+    "index": 408,
+    "mc_name": "item.leggingsGold",
+    "elements": []
+  },
+  {
+    "index": 409,
+    "mc_name": "item.bootsGold",
+    "elements": []
+  },
+  {
+    "index": 410,
+    "mc_name": "item.flint",
+    "elements": []
+  },
+  {
+    "index": 411,
+    "mc_name": "item.porkchopRaw",
+    "elements": []
+  },
+  {
+    "index": 412,
+    "mc_name": "item.porkchopCooked",
+    "elements": []
+  },
+  {
+    "index": 413,
+    "mc_name": "item.painting",
+    "elements": []
+  },
+  {
+    "index": 414,
+    "mc_name": "item.appleGold",
+    "elements": []
+  },
+  {
+    "index": 415,
+    "mc_name": "item.sign",
+    "elements": []
+  },
+  {
+    "index": 416,
+    "mc_name": "item.doorOak",
+    "elements": []
+  },
+  {
+    "index": 417,
+    "mc_name": "item.bucket",
+    "elements": []
+  },
+  {
+    "index": 418,
+    "mc_name": "item.bucketWater",
+    "elements": []
+  },
+  {
+    "index": 419,
+    "mc_name": "item.bucketLava",
+    "elements": []
+  },
+  {
+    "index": 420,
+    "mc_name": "item.minecart",
+    "elements": []
+  },
+  {
+    "index": 421,
+    "mc_name": "item.saddle",
+    "elements": []
+  },
+  {
+    "index": 422,
+    "mc_name": "item.doorIron",
+    "elements": []
+  },
+  {
+    "index": 423,
+    "mc_name": "item.redstone",
+    "elements": []
+  },
+  {
+    "index": 424,
+    "mc_name": "item.snowball",
+    "elements": []
+  },
+  {
+    "index": 425,
+    "mc_name": "item.boat",
+    "elements": []
+  },
+  {
+    "index": 426,
+    "mc_name": "item.leather",
+    "elements": []
+  },
+  {
+    "index": 427,
+    "mc_name": "item.milk",
+    "elements": []
+  },
+  {
+    "index": 428,
+    "mc_name": "item.brick",
+    "elements": []
+  },
+  {
+    "index": 429,
+    "mc_name": "item.clay",
+    "elements": []
+  },
+  {
+    "index": 430,
+    "mc_name": "item.reeds",
+    "elements": []
+  },
+  {
+    "index": 431,
+    "mc_name": "item.paper",
+    "elements": []
+  },
+  {
+    "index": 432,
+    "mc_name": "item.book",
+    "elements": []
+  },
+  {
+    "index": 433,
+    "mc_name": "item.slimeball",
+    "elements": []
+  },
+  {
+    "index": 434,
+    "mc_name": "item.minecartChest",
+    "elements": []
+  },
+  {
+    "index": 435,
+    "mc_name": "item.minecartFurnace",
+    "elements": []
+  },
+  {
+    "index": 436,
+    "mc_name": "item.egg",
+    "elements": []
+  },
+  {
+    "index": 437,
+    "mc_name": "item.compass",
+    "elements": []
+  },
+  {
+    "index": 438,
+    "mc_name": "item.fishingRod",
+    "elements": []
+  },
+  {
+    "index": 439,
+    "mc_name": "item.clock",
+    "elements": []
+  },
+  {
+    "index": 440,
+    "mc_name": "item.yellowDust",
+    "elements": []
+  },
+  {
+    "index": 441,
+    "mc_name": "item.fish",
+    "elements": []
+  },
+  {
+    "index": 442,
+    "mc_name": "item.fish",
+    "elements": []
+  },
+  {
+    "index": 443,
+    "mc_name": "item.dyePowder",
+    "elements": []
+  },
+  {
+    "index": 444,
+    "mc_name": "item.bone",
+    "elements": []
+  },
+  {
+    "index": 445,
+    "mc_name": "item.sugar",
+    "elements": []
+  },
+  {
+    "index": 446,
+    "mc_name": "item.cake",
+    "elements": []
+  },
+  {
+    "index": 447,
+    "mc_name": "item.bed",
+    "elements": []
+  },
+  {
+    "index": 448,
+    "mc_name": "item.diode",
+    "elements": []
+  },
+  {
+    "index": 449,
+    "mc_name": "item.cookie",
+    "elements": []
+  },
+  {
+    "index": 450,
+    "mc_name": "item.map",
+    "elements": []
+  },
+  {
+    "index": 451,
+    "mc_name": "item.shears",
+    "elements": []
+  },
+  {
+    "index": 452,
+    "mc_name": "item.melon",
+    "elements": []
+  },
+  {
+    "index": 453,
+    "mc_name": "item.seeds_pumpkin",
+    "elements": []
+  },
+  {
+    "index": 454,
+    "mc_name": "item.seeds_melon",
+    "elements": []
+  },
+  {
+    "index": 455,
+    "mc_name": "item.beefRaw",
+    "elements": []
+  },
+  {
+    "index": 456,
+    "mc_name": "item.beefCooked",
+    "elements": []
+  },
+  {
+    "index": 457,
+    "mc_name": "item.chickenRaw",
+    "elements": []
+  },
+  {
+    "index": 458,
+    "mc_name": "item.chickenCooked",
+    "elements": []
+  },
+  {
+    "index": 459,
+    "mc_name": "item.rottenFlesh",
+    "elements": []
+  },
+  {
+    "index": 460,
+    "mc_name": "item.enderPearl",
+    "elements": []
+  },
+  {
+    "index": 461,
+    "mc_name": "item.blazeRod",
+    "elements": []
+  },
+  {
+    "index": 462,
+    "mc_name": "item.ghastTear",
+    "elements": []
+  },
+  {
+    "index": 463,
+    "mc_name": "item.goldNugget",
+    "elements": []
+  },
+  {
+    "index": 464,
+    "mc_name": "item.netherStalkSeeds",
+    "elements": []
+  },
+  {
+    "index": 465,
+    "mc_name": "item.potion",
+    "elements": []
+  },
+  {
+    "index": 466,
+    "mc_name": "item.glassBottle",
+    "elements": []
+  },
+  {
+    "index": 467,
+    "mc_name": "item.spiderEye",
+    "elements": []
+  },
+  {
+    "index": 468,
+    "mc_name": "item.fermentedSpiderEye",
+    "elements": []
+  },
+  {
+    "index": 469,
+    "mc_name": "item.blazePowder",
+    "elements": []
+  },
+  {
+    "index": 470,
+    "mc_name": "item.magmaCream",
+    "elements": []
+  },
+  {
+    "index": 471,
+    "mc_name": "item.brewingStand",
+    "elements": []
+  },
+  {
+    "index": 472,
+    "mc_name": "item.cauldron",
+    "elements": []
+  },
+  {
+    "index": 473,
+    "mc_name": "item.eyeOfEnder",
+    "elements": []
+  },
+  {
+    "index": 474,
+    "mc_name": "item.speckledMelon",
+    "elements": []
+  },
+  {
+    "index": 475,
+    "mc_name": "item.monsterPlacer",
+    "elements": []
+  },
+  {
+    "index": 476,
+    "mc_name": "item.expBottle",
+    "elements": []
+  },
+  {
+    "index": 477,
+    "mc_name": "item.fireball",
+    "elements": []
+  },
+  {
+    "index": 478,
+    "mc_name": "item.writingBook",
+    "elements": []
+  },
+  {
+    "index": 479,
+    "mc_name": "item.writtenBook",
+    "elements": []
+  },
+  {
+    "index": 480,
+    "mc_name": "item.emerald",
+    "elements": []
+  },
+  {
+    "index": 481,
+    "mc_name": "item.frame",
+    "elements": []
+  },
+  {
+    "index": 482,
+    "mc_name": "item.flowerPot",
+    "elements": []
+  },
+  {
+    "index": 483,
+    "mc_name": "item.carrots",
+    "elements": []
+  },
+  {
+    "index": 484,
+    "mc_name": "item.potato",
+    "elements": []
+  },
+  {
+    "index": 485,
+    "mc_name": "item.potatoBaked",
+    "elements": []
+  },
+  {
+    "index": 486,
+    "mc_name": "item.potatoPoisonous",
+    "elements": []
+  },
+  {
+    "index": 487,
+    "mc_name": "item.emptyMap",
+    "elements": []
+  },
+  {
+    "index": 488,
+    "mc_name": "item.carrotGolden",
+    "elements": []
+  },
+  {
+    "index": 489,
+    "mc_name": "item.skull",
+    "elements": []
+  },
+  {
+    "index": 490,
+    "mc_name": "item.carrotOnAStick",
+    "elements": []
+  },
+  {
+    "index": 491,
+    "mc_name": "item.netherStar",
+    "elements": []
+  },
+  {
+    "index": 492,
+    "mc_name": "item.pumpkinPie",
+    "elements": []
+  },
+  {
+    "index": 493,
+    "mc_name": "item.fireworks",
+    "elements": []
+  },
+  {
+    "index": 494,
+    "mc_name": "item.fireworksCharge",
+    "elements": []
+  },
+  {
+    "index": 495,
+    "mc_name": "item.enchantedBook",
+    "elements": []
+  },
+  {
+    "index": 496,
+    "mc_name": "item.comparator",
+    "elements": []
+  },
+  {
+    "index": 497,
+    "mc_name": "item.netherbrick",
+    "elements": []
+  },
+  {
+    "index": 498,
+    "mc_name": "item.netherquartz",
+    "elements": []
+  },
+  {
+    "index": 499,
+    "mc_name": "item.minecartTnt",
+    "elements": []
+  },
+  {
+    "index": 500,
+    "mc_name": "item.minecartHopper",
+    "elements": []
+  },
+  {
+    "index": 501,
+    "mc_name": "item.prismarineShard",
+    "elements": []
+  },
+  {
+    "index": 502,
+    "mc_name": "item.prismarineCrystals",
+    "elements": []
+  },
+  {
+    "index": 503,
+    "mc_name": "item.rabbitRaw",
+    "elements": []
+  },
+  {
+    "index": 504,
+    "mc_name": "item.rabbitCooked",
+    "elements": []
+  },
+  {
+    "index": 505,
+    "mc_name": "item.rabbitStew",
+    "elements": []
+  },
+  {
+    "index": 506,
+    "mc_name": "item.rabbitFoot",
+    "elements": []
+  },
+  {
+    "index": 507,
+    "mc_name": "item.rabbitHide",
+    "elements": []
+  },
+  {
+    "index": 508,
+    "mc_name": "item.armorStand",
+    "elements": []
+  },
+  {
+    "index": 509,
+    "mc_name": "item.horsearmormetal",
+    "elements": []
+  },
+  {
+    "index": 510,
+    "mc_name": "item.horsearmorgold",
+    "elements": []
+  },
+  {
+    "index": 511,
+    "mc_name": "item.horsearmordiamond",
+    "elements": []
+  },
+  {
+    "index": 512,
+    "mc_name": "item.leash",
+    "elements": []
+  },
+  {
+    "index": 513,
+    "mc_name": "item.nameTag",
+    "elements": []
+  },
+  {
+    "index": 514,
+    "mc_name": "item.minecartCommandBlock",
+    "elements": []
+  },
+  {
+    "index": 515,
+    "mc_name": "item.muttonRaw",
+    "elements": []
+  },
+  {
+    "index": 516,
+    "mc_name": "item.muttonCooked",
+    "elements": []
+  },
+  {
+    "index": 517,
+    "mc_name": "tile.banner",
+    "elements": []
+  },
+  {
+    "index": 518,
+    "mc_name": "item.doorSpruce",
+    "elements": []
+  },
+  {
+    "index": 519,
+    "mc_name": "item.doorBirch",
+    "elements": []
+  },
+  {
+    "index": 520,
+    "mc_name": "item.doorJungle",
+    "elements": []
+  },
+  {
+    "index": 521,
+    "mc_name": "item.doorAcacia",
+    "elements": []
+  },
+  {
+    "index": 522,
+    "mc_name": "item.doorDarkOak",
+    "elements": []
+  },
+  {
+    "index": 523,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 524,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 525,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 526,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 527,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 528,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 529,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 530,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 531,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 532,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 533,
+    "mc_name": "item.record",
+    "elements": []
+  },
+  {
+    "index": 534,
+    "mc_name": "item.record",
+    "elements": []
+  }
+]

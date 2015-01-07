@@ -5,7 +5,8 @@ import com.tinkerlad.chemistry2.config.Config;
 import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.item.ModItems;
 import com.tinkerlad.chemistry2.proxies.CommonProxy;
-import com.tinkerlad.chemistry2.registries.ElementRegistry;
+import com.tinkerlad.chemistry2.registries.element.ElementRegistry;
+import com.tinkerlad.chemistry2.registries.elementAssignment.ElementAssignerRegistry;
 import com.tinkerlad.chemistry2.tileentities.TileEntites;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -37,7 +38,7 @@ public class Chemistry {
     public void preInit(FMLPreInitializationEvent event) {
         long begin = System.currentTimeMillis();
 
-        LogHandler.setLogger((Logger) event.getModLog());
+        LogHandler.getInstance().setLogger((Logger) event.getModLog());
 
         mcDir = event.getModConfigurationDirectory().getParentFile();
 
@@ -45,7 +46,7 @@ public class Chemistry {
 
         ElementRegistry.getInstance();
 
-        //DevUtils.dumpBlockNames();
+//        DevUtils.dumpBlockNames();
 
         ModBlocks.init();
         ModItems.init();
@@ -53,7 +54,7 @@ public class Chemistry {
 
         long end = System.currentTimeMillis();
 
-        LogHandler.all("Pre-Init took " + (end - begin) + " milliseconds.");
+        LogHandler.getInstance().all("Pre-Init took " + (end - begin) + " milliseconds.");
     }
 
     @Mod.EventHandler
@@ -63,7 +64,8 @@ public class Chemistry {
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        ElementRegistry.getInstance().configureElementMappings();
+        ElementAssignerRegistry.getInstance().postInit();
     }
 
     @Mod.EventHandler

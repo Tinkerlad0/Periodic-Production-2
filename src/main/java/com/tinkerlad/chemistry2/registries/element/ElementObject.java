@@ -1,4 +1,4 @@
-package com.tinkerlad.chemistry2.registries;
+package com.tinkerlad.chemistry2.registries.element;
 
 /**
  * Created by brock_000 on 4/01/2015.

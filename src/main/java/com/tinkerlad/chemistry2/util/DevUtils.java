@@ -7,11 +7,16 @@ import net.minecraft.item.Item;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class DevUtils {
 
     public static void dumpBlockNames() {
+
+        getAllRegisteredItemsAndTiles();
 
         try {
             File file = new File("C:\\temp\\PPDump.csv");
@@ -19,18 +24,37 @@ public class DevUtils {
             //file.createNewFile();
             FileWriter fileWriter = new FileWriter(file);
 
-            getBlockNames(fileWriter);
-            getItemNames(fileWriter);
+            List<String> ids = getAllRegisteredItemsAndTiles();
 
-            fileWriter.flush();
-            fileWriter.close();
+
         } catch (IOException e) {
             e.printStackTrace();
             return;
         }
     }
 
-    private static void getItemNames(FileWriter fileWriter) throws IOException {
+    public static List<String> getAllRegisteredItemsAndTiles() {
+        Iterator<Item> itemIterator = Item.itemRegistry.iterator();
+        Iterator<Block> blockIterator = Block.blockRegistry.iterator();
+
+        List<String> identifiers = new LinkedList<>();
+
+        while (itemIterator.hasNext()) {
+            Item item = itemIterator.next();
+            String itemIdentifier = (String) Item.itemRegistry.getNameForObject(item);
+            identifiers.add(itemIdentifier);
+        }
+
+        while (blockIterator.hasNext()) {
+            Block block = blockIterator.next();
+            String blockIdentifier = (String) Block.blockRegistry.getNameForObject(block);
+            identifiers.add(blockIdentifier);
+        }
+
+        return identifiers;
+    }
+
+    private static void getItemNames(Writer fileWriter) throws IOException {
         Iterator<Item> itemIterator = Item.itemRegistry.iterator();
 
         while (itemIterator.hasNext()) {
@@ -43,7 +67,7 @@ public class DevUtils {
         }
     }
 
-    private static void appendInfo(FileWriter writer, String[] args) throws IOException {
+    private static void appendInfo(Writer writer, String[] args) throws IOException {
         for (int i = 0; i < args.length; i++) {
             writer.append(args[i]);
             writer.append(',');
@@ -51,7 +75,7 @@ public class DevUtils {
         writer.append('\n');
     }
 
-    private static void getBlockNames(FileWriter fileWriter) throws IOException {
+    private static void getBlockNames(Writer fileWriter) throws IOException {
         Iterator<Block> blockIterator = Block.blockRegistry.iterator();
 
         while (blockIterator.hasNext()) {
