@@ -30,12 +30,12 @@ public class ElementRegistry {
 
         for (Map.Entry<String, JsonElement> entry : elementRaw) {
             ElementObject element = gson.fromJson(entry.getValue(), ElementObject.class);
-            LogHandler.getInstance().all("Element " + entry.getKey() + " stored with data {" + element + "}");
+            LogHandler.all("Element " + entry.getKey() + " stored with data {" + element + "}");
 
             if (Integer.parseInt(entry.getKey()) != Integer.parseInt(element.getZ())) {
-                LogHandler.getInstance().error("ERROR!! Check Element " + element + " registered as " + entry.getKey());
-                LogHandler.getInstance().error(element.getName() + " has not been added ElementRegistry to avoid conflicts");
-                LogHandler.getInstance().error("Please contact the mod author to resolve this issue");
+                LogHandler.error("ERROR!! Check Element " + element + " registered as " + entry.getKey());
+                LogHandler.error(element.getName() + " has not been added ElementRegistry to avoid conflicts");
+                LogHandler.error("Please contact the mod author to resolve this issue");
             } else {
                 elementObjects.add(element);
             }
