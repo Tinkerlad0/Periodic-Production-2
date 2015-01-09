@@ -34,13 +34,42 @@ public class ElementAssignmentRegistry {
         recipeList = CraftingManager.getInstance().getRecipeList();
         furnaceRecipes = FurnaceRecipes.instance().getSmeltingList();
 
-        ArrayListMultimap<ItemStack, ItemStack> baseItemStacks = ArrayListMultimap.create();
+        RecipeList recipes = new RecipeList(getAllValidRecipes());
 
-        List<Recipe> recipes = getAllValidRecipes();
+        RecipeList recipeLstTemp = recipes.copy();
 
+        ArrayList<Recipe> baseRecipesList = new ArrayList<>();
 
+        for (Recipe recipe : recipeLstTemp.getRecipeList()) {
+            ArrayList<ItemStack> baseItems = getRecipeBaseItems(recipe.getOutput(), recipeLstTemp);
 
+            System.out.println(recipe.getOutput() + " decomposes to " + baseItems);
+        }
 
+    }
+
+    private ArrayList<ItemStack> getRecipeBaseItems(ItemStack stack, RecipeList recipes) {
+
+        //BBFS I think xD
+
+        ArrayList<ItemStack> baseList = new ArrayList<>();
+
+        Queue<ItemStack> openList = new LinkedList<>();
+        openList.add(stack);
+
+        while (!openList.isEmpty()) {
+            ItemStack current = openList.remove();
+
+            Recipe recipe = recipes.getRecipeFromStack(current);
+
+            if (recipe == null) {
+                baseList.add(current);
+            } else {
+                openList.addAll(Arrays.asList(recipe.getRecipeItems()));
+            }
+        }
+
+        return baseList;
     }
 
     public List<Recipe> getAllValidRecipes() {

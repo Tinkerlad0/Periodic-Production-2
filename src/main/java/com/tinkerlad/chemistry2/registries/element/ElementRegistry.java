@@ -1,7 +1,10 @@
 package com.tinkerlad.chemistry2.registries.element;
 
 import com.google.common.collect.ArrayListMultimap;
-import com.google.gson.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import com.tinkerlad.chemistry2.handler.LogHandler;
 import net.minecraft.item.ItemStack;
@@ -16,7 +19,6 @@ public class ElementRegistry {
 
     private static final ElementRegistry instance = new ElementRegistry();
     private static final String elementsJsonLoc = "/assets/tnkchem2/data/elements.json";
-    private static final String mcElementsJsonLoc = "/assets/tnkchem2/data/mc_elements.json";
     private Set<ElementObject> elementObjects;
 
     private ArrayListMultimap<ItemStack, ElementComponent> elementMappings = ArrayListMultimap.create();
@@ -64,29 +66,6 @@ public class ElementRegistry {
 
         return entries;
     }
-
-    private static Set<JsonElement> getMCElementsJson() {
-        InputStream is = ElementRegistry.class.getResourceAsStream(mcElementsJsonLoc);
-        InputStreamReader isr = new InputStreamReader(is);
-
-        JsonReader jReader = new JsonReader(isr);
-        jReader.setLenient(true);
-
-        JsonParser parser = new JsonParser();
-
-        JsonElement element = parser.parse(jReader);
-
-        JsonArray lst = element.getAsJsonArray();
-
-        Set<JsonElement> output = new HashSet<>();
-
-        for (JsonElement jsonElement : lst) {
-            output.add(jsonElement);
-        }
-
-        return output;
-    }
-
     /**
      * @param c Character to test
      * @return returns 1 for number 2 for lowercase, 3 for uppercase, -1 indicates non alpha numeric
