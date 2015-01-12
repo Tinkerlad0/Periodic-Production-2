@@ -1,7 +1,7 @@
 {
 	"parent": "builtin/generated",
 	"textures": {
-		"layer0": "tnkchem2:items/testing"
+	  "layer0": "tnkchem2:items/atom"
 	},
 	"display": {
 		"thirdperson": {

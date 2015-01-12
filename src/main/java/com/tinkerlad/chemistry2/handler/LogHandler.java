@@ -7,6 +7,7 @@ package com.tinkerlad.chemistry2.handler;
 import com.tinkerlad.chemistry2.Chemistry;
 import org.apache.logging.log4j.Level;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -17,7 +18,23 @@ import java.util.Date;
 public class LogHandler {
 
     private final static DateFormat df = new SimpleDateFormat("yyyy.MM.dd  hh:mm:ss ");
-    private static String logFile = Chemistry.mcDir.getParent() + "\\logs\\tnkchem2.log";
+    private static String logFile = Chemistry.mcDir + "\\logs\\tnkchem2.log";
+
+    public static void init() {
+        try {
+            File log = new File(logFile);
+            log.delete();
+            log.createNewFile();
+            Date now = new Date();
+            String currentTime = df.format(now);
+            FileWriter aWriter = new FileWriter(log, true);
+            aWriter.write("Beginning Periodic Production 2 Log File: -->" + System.lineSeparator());
+            aWriter.flush();
+            aWriter.close();
+        } catch (Exception e) {
+            System.out.println(stack2string(e));
+        }
+    }
 
     public static void all(Object object) {
         write(Level.ALL, object.toString());
@@ -65,14 +82,16 @@ public class LogHandler {
 
     public static void write(String file, Level level, String msg) {
         try {
+            File log = new File(file);
+            log.createNewFile();
             Date now = new Date();
             String currentTime = df.format(now);
-            FileWriter aWriter = new FileWriter(file, true);
+            FileWriter aWriter = new FileWriter(log, true);
             aWriter.write("[" + currentTime + "] [" + level.name() + "] " + msg + System.lineSeparator());
-            System.out.println(currentTime + " " + msg);
             aWriter.flush();
             aWriter.close();
         } catch (Exception e) {
+            System.out.println("file = " + file);
             System.out.println(stack2string(e));
         }
     }

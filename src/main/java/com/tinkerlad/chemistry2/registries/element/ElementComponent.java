@@ -23,4 +23,11 @@ public class ElementComponent {
         return "Element {" + element.getSymbol() + " : " + quantity + "}";
     }
 
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public ElementObject getElement() {
+        return element;
+    }
 }

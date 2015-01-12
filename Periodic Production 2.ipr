@@ -188,9 +188,6 @@
       <module fileurl="file://$PROJECT_DIR$/Periodic Production 2.iml" filepath="$PROJECT_DIR$/Periodic Production 2.iml" />
     </modules>
   </component>
-  <component name="ProjectPlainTextFileTypeManager">
-    <file url="file://$PROJECT_DIR$/src/main/resources/assets/tnkchem2/data/elements.json" />
-  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" assert-keyword="true" jdk-15="true" project-jdk-name="1.7" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>

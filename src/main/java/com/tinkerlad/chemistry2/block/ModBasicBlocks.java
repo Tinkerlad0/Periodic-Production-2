@@ -1,6 +1,6 @@
 package com.tinkerlad.chemistry2.block;
 
-public class ModBlocks {
+public class ModBasicBlocks {
 
 
     public static void init() {

@@ -1,13 +1,13 @@
 package com.tinkerlad.chemistry2;
 
-import com.tinkerlad.chemistry2.block.ModBlocks;
+import com.tinkerlad.chemistry2.block.ModBasicBlocks;
 import com.tinkerlad.chemistry2.config.Config;
 import com.tinkerlad.chemistry2.handler.LogHandler;
-import com.tinkerlad.chemistry2.item.ModItems;
+import com.tinkerlad.chemistry2.item.ModBasicItems;
 import com.tinkerlad.chemistry2.proxies.CommonProxy;
+import com.tinkerlad.chemistry2.registries.DynamicLocalisations;
+import com.tinkerlad.chemistry2.registries.ItemRegistry;
 import com.tinkerlad.chemistry2.registries.element.ElementRegistry;
-import com.tinkerlad.chemistry2.registries.elementAssignment.ElementAssignmentRegistry;
-import com.tinkerlad.chemistry2.tileentities.TileEntites;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
@@ -36,15 +36,21 @@ public class Chemistry {
 
         mcDir = event.getModConfigurationDirectory().getParentFile();
 
+        LogHandler.init();
+
         Config.preInit(event.getSuggestedConfigurationFile());
 
-        ElementRegistry.getInstance();
+        ElementRegistry.getInstance().init();
+        DynamicLocalisations.getInstance();
 
 //        DevUtils.dumpBlockNames();
 
-        ModBlocks.init();
-        ModItems.init();
-        TileEntites.init();
+        ModBasicBlocks.init();
+        ModBasicItems.init();
+
+        ItemRegistry.getInstance().generateAtomItemStacks();
+
+//        TileEntites.init();
 
         long end = System.currentTimeMillis();
 
@@ -54,6 +60,7 @@ public class Chemistry {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.registerRenderers();
+        ItemRegistry.getInstance().realignJSONMappings(event);
     }
 
     @Mod.EventHandler
@@ -68,7 +75,7 @@ public class Chemistry {
 
     @Mod.EventHandler
     public void loaded(FMLLoadCompleteEvent event) {
-        ElementRegistry.getInstance().configureElementMappings();
-        ElementAssignmentRegistry.getInstance().finalizeLoading();
+//        ElementAssignmentRegistry.getInstance().finalizeLoading();
+        DynamicLocalisations.getInstance().registerLocalisations();
     }
 }

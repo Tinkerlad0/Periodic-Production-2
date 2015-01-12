@@ -31,10 +31,16 @@ public class ElementAssignmentRegistry {
 
     public void finalizeLoading() {
 
+        LogHandler.warn("Element Assignment Registry is in loading phase");
+
         recipeList = CraftingManager.getInstance().getRecipeList();
         furnaceRecipes = FurnaceRecipes.instance().getSmeltingList();
 
+        LogHandler.warn("ElementAssignmentRegistry got vanilla recipes");
+
         RecipeList recipes = new RecipeList(getAllValidRecipes());
+
+        LogHandler.warn("ElementAssignmentRegistry compiled recipe list");
 
         RecipeList recipeLstTemp = recipes.copy();
 
@@ -43,7 +49,7 @@ public class ElementAssignmentRegistry {
         for (Recipe recipe : recipeLstTemp.getRecipeList()) {
             ArrayList<ItemStack> baseItems = getRecipeBaseItems(recipe.getOutput(), recipeLstTemp);
 
-            System.out.println(recipe.getOutput() + " decomposes to " + baseItems);
+            LogHandler.warn(recipe.getOutput() + " decomposes to " + baseItems);
         }
 
     }
@@ -130,6 +136,8 @@ public class ElementAssignmentRegistry {
                 }
             }
         }
+
+        LogHandler.fatal("RETURNING");
         return output;
     }
 }

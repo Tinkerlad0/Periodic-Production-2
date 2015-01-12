@@ -1,16 +1,18 @@
 package com.tinkerlad.chemistry2.registries.element;
 
-import com.google.common.collect.ArrayListMultimap;
 import com.google.gson.Gson;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.stream.JsonReader;
 import com.tinkerlad.chemistry2.handler.LogHandler;
-import net.minecraft.item.ItemStack;
 
-import java.io.*;
-import java.util.*;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * Created by brock_000 on 4/01/2015.
@@ -18,39 +20,19 @@ import java.util.*;
 public class ElementRegistry {
 
     private static final ElementRegistry instance = new ElementRegistry();
-    private static final String elementsJsonLoc = "/assets/tnkchem2/data/elements.json";
+    private static final String elementsJsonLoc = "/assets/tnkchem2/data/element.json";
     private Set<ElementObject> elementObjects;
 
-    private ArrayListMultimap<ItemStack, ElementComponent> elementMappings = ArrayListMultimap.create();
+    private Map<Integer, Integer> elementColours = new HashMap<Integer, Integer>();
 
     private ElementRegistry() {
-
-        elementObjects = new HashSet<ElementObject>();
-
-        Set<Map.Entry<String, JsonElement>> elementRaw = getElementsJson();
-        Gson gson = new Gson();
-
-        for (Map.Entry<String, JsonElement> entry : elementRaw) {
-            ElementObject element = gson.fromJson(entry.getValue(), ElementObject.class);
-            LogHandler.all("Element " + entry.getKey() + " stored with data {" + element + "}");
-
-            if (Integer.parseInt(entry.getKey()) != Integer.parseInt(element.getZ())) {
-                LogHandler.error("ERROR!! Check Element " + element + " registered as " + entry.getKey());
-                LogHandler.error(element.getName() + " has not been added ElementRegistry to avoid conflicts");
-                LogHandler.error("Please contact the mod author to resolve this issue");
-            } else {
-                elementObjects.add(element);
-            }
-        }
-
-
     }
 
     public static ElementRegistry getInstance() {
         return instance;
     }
 
-    private static Set<Map.Entry<String, JsonElement>> getElementsJson() {
+    private static Set<Map.Entry<String, JsonElement>> loadElementsJson() {
         InputStream is = ElementRegistry.class.getResourceAsStream(elementsJsonLoc);
         InputStreamReader isr = new InputStreamReader(is);
 
@@ -66,6 +48,7 @@ public class ElementRegistry {
 
         return entries;
     }
+
     /**
      * @param c Character to test
      * @return returns 1 for number 2 for lowercase, 3 for uppercase, -1 indicates non alpha numeric
@@ -87,6 +70,29 @@ public class ElementRegistry {
         return -1;
     }
 
+    public void init() {
+        elementObjects = new HashSet<ElementObject>();
+
+        Set<Map.Entry<String, JsonElement>> elementRaw = loadElementsJson();
+        Gson gson = new Gson();
+
+        for (Map.Entry<String, JsonElement> entry : elementRaw) {
+            ElementObject element = gson.fromJson(entry.getValue(), ElementObject.class);
+            LogHandler.all("Element " + entry.getKey() + " stored with data {" + element + "}");
+
+            if (Integer.parseInt(entry.getKey()) != Integer.parseInt(element.getZ())) {
+                LogHandler.error("ERROR!! Check Element " + element + " registered as " + entry.getKey());
+                LogHandler.error(element.getName() + " has not been added ElementRegistry to avoid conflicts");
+                LogHandler.error("Please contact the mod author to resolve this issue");
+            } else {
+                elementObjects.add(element);
+            }
+        }
+
+        //Load element colour information from element_colour.json
+
+    }
+
     public ElementObject getElementFromZ(int Z) {
         for (ElementObject obj : elementObjects) {
             if (obj.getZ().matches(String.valueOf(Z))) {
@@ -105,82 +111,11 @@ public class ElementRegistry {
         return null;
     }
 
-    public void configureElementMappings() {
-
-
+    public Set<ElementObject> getElementObjects() {
+        return elementObjects;
     }
 
-    public List<ElementComponent> getElementsFromCompoundString(String compound) {
-        StringReader reader = new StringReader(compound);
-
-        StringBuilder elementTemp = new StringBuilder();
-        StringBuilder quantityTemp = new StringBuilder();
-
-        List<ElementComponent> output = new LinkedList<ElementComponent>();
-
-        try {
-            char charTemp = (char) reader.read();
-
-            if (!(getCharType(charTemp) == 3)) {
-                throw new InvalidObjectException("String Is not a valid compound");
-            }
-
-            elementTemp.append(charTemp);
-
-            int c;
-
-            while ((c = reader.read()) != -1) {
-                charTemp = (char) c;
-                if (getCharType(charTemp) == 2) {
-                    elementTemp.append(charTemp);
-                } else if (getCharType(charTemp) == 1) {
-                    quantityTemp.append(charTemp);
-                } else if (getCharType(charTemp) == 3) {
-                    //Element Complete
-
-
-                    int quantity = 1;
-                    if (!quantityTemp.equals("")) {
-                        quantity = Integer.valueOf(quantityTemp.toString());
-                    }
-
-                    ElementObject elementObject = getElementFromSymbol(elementTemp.toString());
-
-                    ElementComponent element = new ElementComponent(elementObject, quantity);
-
-                    output.add(element);
-
-                    elementTemp = new StringBuilder();
-                    quantityTemp = new StringBuilder();
-
-                    elementTemp.append(charTemp);
-                } else {
-                    throw new InvalidObjectException("Unrecognised Character in compound: " + charTemp);
-                }
-            }
-
-            int quantity = 1;
-            if (!quantityTemp.equals("")) {
-                quantity = Integer.valueOf(quantityTemp.toString());
-            }
-
-            ElementObject elementObject = getElementFromSymbol(elementTemp.toString());
-
-            ElementComponent element = new ElementComponent(elementObject, quantity);
-
-            output.add(element);
-
-            reader.close();
-
-        } catch (InvalidObjectException e) {
-            System.err.println(e.getMessage());
-            return output;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return output;
-        }
-
-        return output;
+    public int getColourFromZ(int Z) {
+        return 0xFF0000; //elementColours.get(Z);
     }
-
 }

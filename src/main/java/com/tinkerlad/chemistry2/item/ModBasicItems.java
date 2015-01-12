@@ -1,8 +1,9 @@
 package com.tinkerlad.chemistry2.item;
 
-public class ModItems {
+public class ModBasicItems {
 
     public static ItemTesting itemTesting;
+    public static ItemAtom itemAtom;
 
     public static void init() {
 
