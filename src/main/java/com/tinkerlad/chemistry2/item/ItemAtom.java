@@ -1,10 +1,10 @@
 package com.tinkerlad.chemistry2.item;
 
 import com.tinkerlad.chemistry2.Chemistry;
-import com.tinkerlad.chemistry2.registries.element.ElementObject;
+import com.tinkerlad.chemistry2.CreativeTab;
 import com.tinkerlad.chemistry2.registries.element.ElementRegistry;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.util.Constants;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -12,17 +12,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
  */
 public class ItemAtom extends ItemGeneric {
 
-    public ElementObject element;
+    public static final String name = "atom";
 
-    public ItemAtom(ElementObject elementObject) {
-        element = elementObject;
-        setUnlocalizedName(element.getSymbol());
-        setCreativeTab(CreativeTabs.tabMisc);
-        GameRegistry.registerItem(this, element.getSymbol(), Chemistry.MODID);
+    public ItemAtom() {
+        setUnlocalizedName(name);
+        setCreativeTab(CreativeTab.tabMaterials);
+        GameRegistry.registerItem(this, name, Chemistry.MODID);
     }
 
     @Override
     public int getColorFromItemStack(ItemStack stack, int renderPass) {
-        return ElementRegistry.getInstance().getColourFromZ(Integer.parseInt(element.getZ()));
+        if (stack.getTagCompound() != null && stack.getTagCompound().hasKey("Z", Constants.NBT.TAG_INT)) {
+            return ElementRegistry.getInstance().getColourFromZ(stack.getTagCompound().getInteger("Z"));
+        }
+        return 0xFFFFFF;
     }
 }

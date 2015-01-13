@@ -1,9 +1,6 @@
 package com.tinkerlad.chemistry2.registries.element;
 
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
+import com.google.gson.*;
 import com.google.gson.stream.JsonReader;
 import com.tinkerlad.chemistry2.handler.LogHandler;
 
@@ -21,8 +18,8 @@ public class ElementRegistry {
 
     private static final ElementRegistry instance = new ElementRegistry();
     private static final String elementsJsonLoc = "/assets/tnkchem2/data/element.json";
+    private static final String elementsColoursJsonLoc = "/assets/tnkchem2/data/element_colour.json";
     private Set<ElementObject> elementObjects;
-
     private Map<Integer, Integer> elementColours = new HashMap<Integer, Integer>();
 
     private ElementRegistry() {
@@ -115,7 +112,55 @@ public class ElementRegistry {
         return elementObjects;
     }
 
+    public void loadElementColours() {
+        InputStream is = ElementRegistry.class.getResourceAsStream(elementsColoursJsonLoc);
+        InputStreamReader isr = new InputStreamReader(is);
+
+        JsonReader jReader = new JsonReader(isr);
+        jReader.setLenient(true);
+
+        JsonParser parser = new JsonParser();
+
+        JsonElement element = parser.parse(jReader);
+        JsonArray lst = element.getAsJsonArray();
+
+
+        Gson gson = new Gson();
+
+        for (JsonElement entry : lst) {
+            ElementColour colour = gson.fromJson(entry, ElementColour.class);
+
+            int elementColour;
+            //Colours -- Black, Colourless, Silver, SlateGray, Yellow, Copper, Gold, Gray, N/A, Red
+            if (colour.Colour.equals("Black")) {
+                elementColour = 0x000000;
+            } else if (colour.Colour.equals("Colourless")) {
+                elementColour = 0xEEEEEE;
+            } else if (colour.Colour.equals("Silver")) {
+                elementColour = 0xC0C0C0;
+            } else if (colour.Colour.equals(" SlateGray")) {
+                elementColour = 0x778899;
+            } else if (colour.Colour.equals("Yellow")) {
+                elementColour = 0xFFFF00;
+            } else if (colour.Colour.equals("Copper")) {
+                elementColour = 0xCB6D51;
+            } else if (colour.Colour.equals("Gold")) {
+                elementColour = 0xFFD700;
+            } else if (colour.Colour.equals("Gray")) {
+                elementColour = 0x808080;
+            } else if (colour.Colour.equals("N/A")) {
+                elementColour = 0x909099;
+            } else if (colour.Colour.equals("Red")) {
+                elementColour = 0xFF0000;
+            } else {
+                elementColour = 0xFFFFFF;
+            }
+
+            elementColours.put(Integer.valueOf(colour.Z), elementColour);
+        }
+    }
+
     public int getColourFromZ(int Z) {
-        return 0xFF0000; //elementColours.get(Z);
+        return elementColours.get(Z);
     }
 }

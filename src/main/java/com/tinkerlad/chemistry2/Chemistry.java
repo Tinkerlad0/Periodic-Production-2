@@ -6,8 +6,8 @@ import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.item.ModBasicItems;
 import com.tinkerlad.chemistry2.proxies.CommonProxy;
 import com.tinkerlad.chemistry2.registries.DynamicLocalisations;
-import com.tinkerlad.chemistry2.registries.ItemRegistry;
 import com.tinkerlad.chemistry2.registries.element.ElementRegistry;
+import com.tinkerlad.chemistry2.registries.elementAssignment.ElementAssignmentRegistry;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.*;
@@ -41,6 +41,7 @@ public class Chemistry {
         Config.preInit(event.getSuggestedConfigurationFile());
 
         ElementRegistry.getInstance().init();
+        ElementRegistry.getInstance().loadElementColours();
         DynamicLocalisations.getInstance();
 
 //        DevUtils.dumpBlockNames();
@@ -48,7 +49,6 @@ public class Chemistry {
         ModBasicBlocks.init();
         ModBasicItems.init();
 
-        ItemRegistry.getInstance().generateAtomItemStacks();
 
 //        TileEntites.init();
 
@@ -60,7 +60,6 @@ public class Chemistry {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         proxy.registerRenderers();
-        ItemRegistry.getInstance().realignJSONMappings(event);
     }
 
     @Mod.EventHandler
@@ -75,7 +74,7 @@ public class Chemistry {
 
     @Mod.EventHandler
     public void loaded(FMLLoadCompleteEvent event) {
-//        ElementAssignmentRegistry.getInstance().finalizeLoading();
+        ElementAssignmentRegistry.getInstance().finalizeLoading();
         DynamicLocalisations.getInstance().registerLocalisations();
     }
 }

@@ -1,7 +1,7 @@
 package com.tinkerlad.chemistry2.item;
 
 import com.tinkerlad.chemistry2.Chemistry;
-import net.minecraft.creativetab.CreativeTabs;
+import com.tinkerlad.chemistry2.CreativeTab;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**
@@ -12,7 +12,7 @@ public class ItemTesting extends ItemGeneric {
 
     public ItemTesting(){
         setUnlocalizedName(name);
-        setCreativeTab(CreativeTabs.tabMisc);
+        setCreativeTab(CreativeTab.tabMachines);
         GameRegistry.registerItem(this,name, Chemistry.MODID);
     }
 }

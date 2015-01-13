@@ -17,5 +17,8 @@ public class ClientProxy extends CommonProxy {
         modelMesher.register(ModBasicItems.itemTesting, 0, new ModelResourceLocation(Chemistry.MODID + ":testing", "inventory"));
         ModelBakery.addVariantName(ModBasicItems.itemTesting, Chemistry.MODID + ":" + ModBasicItems.itemTesting.name);
 
+        modelMesher.register(ModBasicItems.itemTesting, 0, new ModelResourceLocation(Chemistry.MODID + ":atom", "inventory"));
+        ModelBakery.addVariantName(ModBasicItems.itemTesting, Chemistry.MODID + ":" + ModBasicItems.itemTesting.name);
+
     }
 }

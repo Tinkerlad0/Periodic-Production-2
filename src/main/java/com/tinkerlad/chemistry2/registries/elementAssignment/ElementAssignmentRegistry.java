@@ -63,7 +63,10 @@ public class ElementAssignmentRegistry {
         Queue<ItemStack> openList = new LinkedList<>();
         openList.add(stack);
 
-        while (!openList.isEmpty()) {
+        int depth = 0;
+
+        while (!openList.isEmpty() && depth <= 100) {
+            depth++;
             ItemStack current = openList.remove();
 
             Recipe recipe = recipes.getRecipeFromStack(current);
@@ -74,7 +77,8 @@ public class ElementAssignmentRegistry {
                 openList.addAll(Arrays.asList(recipe.getRecipeItems()));
             }
         }
-
+        System.out.println("stack = " + stack);
+        System.out.println("baseList = " + baseList);
         return baseList;
     }
 

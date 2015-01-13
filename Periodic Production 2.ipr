@@ -183,6 +183,9 @@
       </item>
     </group>
   </component>
+  <component name="ProjectDictionaryState">
+    <dictionary name="brock_000" />
+  </component>
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Periodic Production 2.iml" filepath="$PROJECT_DIR$/Periodic Production 2.iml" />

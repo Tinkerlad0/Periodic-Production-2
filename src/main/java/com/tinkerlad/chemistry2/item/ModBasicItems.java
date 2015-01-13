@@ -8,6 +8,6 @@ public class ModBasicItems {
     public static void init() {
 
         itemTesting = new ItemTesting();
-
+        itemAtom = new ItemAtom();
     }
 }

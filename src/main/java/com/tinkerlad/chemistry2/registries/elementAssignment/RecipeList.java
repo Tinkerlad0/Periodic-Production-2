@@ -2,17 +2,16 @@ package com.tinkerlad.chemistry2.registries.elementAssignment;
 
 import net.minecraft.item.ItemStack;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by brock_000 on 8/01/2015.
  */
 public class RecipeList {
-    private ArrayList<Recipe> recipeList;
+    private List<Recipe> recipeList;
 
     public RecipeList(List<Recipe> recipes) {
-        recipeList = (ArrayList<Recipe>) recipes;
+        recipeList = recipes;
     }
 
     public List<Recipe> getRecipeList() {
@@ -25,6 +24,7 @@ public class RecipeList {
 
     public Recipe getRecipeFromStack(ItemStack stack) {
         for (Recipe recipe : recipeList) {
+            if (stack == null || recipe == null || recipe.getOutput() == null) continue;
             if (recipe.getOutput().getItem() == stack.getItem()) {
                 return recipe;
             }
