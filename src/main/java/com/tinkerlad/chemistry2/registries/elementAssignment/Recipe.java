@@ -1,6 +1,10 @@
 package com.tinkerlad.chemistry2.registries.elementAssignment;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by brock_000 on 8/01/2015.
@@ -9,6 +13,7 @@ public class Recipe {
 
     private ItemStack output;
     private ItemStack[] recipeItems;
+    private boolean valid = true;
 
     public Recipe(ItemStack[] recipeItems, ItemStack output) {
         this.recipeItems = recipeItems;
@@ -45,5 +50,31 @@ public class Recipe {
         return recipeItems.length < 1;
     }
 
+    public boolean isValid() {
+        return valid;
+    }
 
+    public void setValid(boolean valid) {
+        this.valid = valid;
+    }
+
+    public boolean matches(Recipe recipe) {
+        boolean flag = true;
+
+        List<Item> items = new ArrayList<>();
+
+        for (ItemStack stack : recipeItems) {
+            items.add(stack.getItem());
+        }
+
+        for (ItemStack stack : recipe.getRecipeItems()) {
+            if (!items.contains(stack.getItem())) {
+                flag = false;
+            }
+        }
+
+        flag = output.getItem() == recipe.getOutput().getItem() ? flag : false;
+
+        return flag;
+    }
 }

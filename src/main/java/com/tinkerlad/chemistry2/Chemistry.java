@@ -5,6 +5,7 @@ import com.tinkerlad.chemistry2.config.Config;
 import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.item.ModBasicItems;
 import com.tinkerlad.chemistry2.proxies.CommonProxy;
+import com.tinkerlad.chemistry2.recipe.Recipes;
 import com.tinkerlad.chemistry2.registries.DynamicLocalisations;
 import com.tinkerlad.chemistry2.registries.element.ElementRegistry;
 import com.tinkerlad.chemistry2.registries.elementAssignment.ElementAssignmentRegistry;
@@ -49,6 +50,7 @@ public class Chemistry {
         ModBasicBlocks.init();
         ModBasicItems.init();
 
+        Recipes.init();
 
 //        TileEntites.init();
 
@@ -74,7 +76,7 @@ public class Chemistry {
 
     @Mod.EventHandler
     public void loaded(FMLLoadCompleteEvent event) {
-        ElementAssignmentRegistry.getInstance().finalizeLoading();
+        ElementAssignmentRegistry.getInstance().assignElements();
         DynamicLocalisations.getInstance().registerLocalisations();
     }
 }

@@ -3,12 +3,16 @@ package com.tinkerlad.chemistry2.registries.elementAssignment;
 import com.google.common.collect.ArrayListMultimap;
 import com.tinkerlad.chemistry2.handler.LogHandler;
 import com.tinkerlad.chemistry2.registries.element.ElementComponent;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.*;
 import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 /**
@@ -20,6 +24,7 @@ public class ElementAssignmentRegistry {
     List recipeList = new LinkedList();
     Map furnaceRecipes = new HashMap();
     private ArrayListMultimap<ItemStack, ElementComponent> elementComponentMap = ArrayListMultimap.create();
+    private ArrayListMultimap<ItemStack, ItemStack> itemBaseItemMap = ArrayListMultimap.create();
 
     public static ElementAssignmentRegistry getInstance() {
         return instance;
@@ -29,7 +34,7 @@ public class ElementAssignmentRegistry {
         return stack == null || stack.getItem() == null || stack.stackSize < 1 || stack.getItemDamage() < 0;
     }
 
-    public void finalizeLoading() {
+    public void assignElements() {
 
         LogHandler.warn("Element Assignment Registry is in loading phase");
 
@@ -42,6 +47,47 @@ public class ElementAssignmentRegistry {
 
         LogHandler.warn("ElementAssignmentRegistry compiled recipe list");
 
+        loadBaseItemsMap(recipes);
+
+        assignElementsToBaseItems();
+
+    }
+
+    private void assignElementsToBaseItems() {
+        List<ItemStack> baseStacks = new ArrayList<>();
+
+
+        for (ItemStack stack : itemBaseItemMap.keySet()) {
+            List<ItemStack> stacks = itemBaseItemMap.get(stack);
+
+            for (ItemStack itemStack : stacks) {
+                if (itemStack == null) continue;
+                baseStacks.add(itemStack);
+            }
+        }
+
+
+        try {
+            File log = new File("C:\\temp\\PP2Dump.txt");
+            log.delete();
+            log.createNewFile();
+            FileWriter aWriter = new FileWriter(log, true);
+            aWriter.write("Beginning Periodic Production 2 Temp Log File: -->" + System.lineSeparator());
+
+            for (ItemStack stack : baseStacks) {
+                aWriter.write(Item.itemRegistry.getNameForObject(stack.getItem()) + "," + stack.getDisplayName() + System.lineSeparator());
+            }
+
+            aWriter.flush();
+            aWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("ENDING");
+    }
+
+    private void loadBaseItemsMap(RecipeList recipes) {
         RecipeList recipeLstTemp = recipes.copy();
 
         ArrayList<Recipe> baseRecipesList = new ArrayList<>();
@@ -49,7 +95,43 @@ public class ElementAssignmentRegistry {
         for (Recipe recipe : recipeLstTemp.getRecipeList()) {
             ArrayList<ItemStack> baseItems = getRecipeBaseItems(recipe.getOutput(), recipeLstTemp);
 
-            LogHandler.warn(recipe.getOutput() + " decomposes to " + baseItems);
+            itemBaseItemMap.putAll(recipe.getOutput(), baseItems);
+
+        }
+
+
+        //Just some debug stuff.
+        try {
+            File log = new File("C:\\temp\\PP2ItemBases.csv");
+            log.delete();
+            log.createNewFile();
+            FileWriter aWriter = new FileWriter(log, true);
+            aWriter.write("Beginning Periodic Production 2 Temp Dump File: -->" + System.lineSeparator());
+
+            List<Item> baseItems = new ArrayList<>();
+
+            for (ItemStack stack : itemBaseItemMap.keySet()) {
+
+                for (ItemStack component : itemBaseItemMap.get(stack)) {
+
+                    if (component == null) continue;
+
+                    if (!baseItems.contains(component.getItem())) {
+                        baseItems.add(component.getItem());
+                    }
+
+
+                }
+            }
+
+            for (Item item : baseItems) {
+                aWriter.write(Item.itemRegistry.getNameForObject(item) + System.lineSeparator());
+            }
+
+            aWriter.flush();
+            aWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
@@ -65,21 +147,25 @@ public class ElementAssignmentRegistry {
 
         int depth = 0;
 
-        while (!openList.isEmpty() && depth <= 100) {
+        while (!openList.isEmpty() && depth <= 500) {
             depth++;
             ItemStack current = openList.remove();
 
-            Recipe recipe = recipes.getRecipeFromStack(current);
-
-            if (recipe == null) {
-                baseList.add(current);
-            } else {
-                openList.addAll(Arrays.asList(recipe.getRecipeItems()));
-            }
+            updateRecipeListAndBaseItemList(current, recipes, recipes.getRecipeFromStack(current), baseList, openList);
         }
-        System.out.println("stack = " + stack);
-        System.out.println("baseList = " + baseList);
         return baseList;
+    }
+
+    private void updateRecipeListAndBaseItemList(ItemStack current, RecipeList recipes, Recipe recipe, ArrayList<ItemStack> baseList, Queue<ItemStack> openList) {
+
+        if (recipe == null) {
+            baseList.add(current);
+        } else if (recipe.isValid()) {
+            openList.addAll(Arrays.asList(recipe.getRecipeItems()));
+        } else {
+            recipes.removeRecipe(recipe);
+            updateRecipeListAndBaseItemList(current, recipes, recipes.getRecipeFromStack(current), baseList, openList);
+        }
     }
 
     public List<Recipe> getAllValidRecipes() {
@@ -87,6 +173,8 @@ public class ElementAssignmentRegistry {
         List<Recipe> output = new LinkedList<>();
 
         recipeList = CraftingManager.getInstance().getRecipeList();
+        Map<ItemStack, ItemStack> smelting = FurnaceRecipes.instance().getSmeltingList();
+
 
         for (Object recipe : recipeList) {
             if (recipe instanceof IRecipe) {
@@ -123,6 +211,7 @@ public class ElementAssignmentRegistry {
                         components = ((ShapedRecipes) recipe).recipeItems;
                     }
 
+
                     if (components != null) {
                         boolean badRecipe = false;
                         for (ItemStack component : components) {
@@ -131,8 +220,8 @@ public class ElementAssignmentRegistry {
                             }
                         }
                         if (!badRecipe) {
-                            Recipe unValRecipe = new Recipe(components,input);
-                            if (!unValRecipe.isEmpty()){
+                            Recipe unValRecipe = new Recipe(components, input);
+                            if (!unValRecipe.isEmpty()) {
                                 output.add(unValRecipe);
                             }
                         }
@@ -141,7 +230,24 @@ public class ElementAssignmentRegistry {
             }
         }
 
-        LogHandler.fatal("RETURNING");
+        for (ItemStack raw : smelting.keySet()) {
+            ItemStack smelted = smelting.get(raw);
+
+            if (invalidStack(raw) || invalidStack(smelted)) {
+                continue;
+            }
+
+            ItemStack[] component = {raw};
+
+            if (raw != null && (raw.getItem() == null || raw.isItemEqual(smelted) || raw.stackSize < 1)) {
+                continue;
+            }
+
+            Recipe smeltingRecipe = new Recipe(component, smelted);
+
+            output.add(smeltingRecipe);
+        }
+
         return output;
     }
 }

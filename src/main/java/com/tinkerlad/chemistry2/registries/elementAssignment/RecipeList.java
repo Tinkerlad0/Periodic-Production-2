@@ -1,5 +1,6 @@
 package com.tinkerlad.chemistry2.registries.elementAssignment;
 
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import java.util.List;
@@ -26,6 +27,22 @@ public class RecipeList {
         for (Recipe recipe : recipeList) {
             if (stack == null || recipe == null || recipe.getOutput() == null) continue;
             if (recipe.getOutput().getItem() == stack.getItem()) {
+
+                boolean blockRecipe = false;
+                for (ItemStack rec : recipe.getRecipeItems()) {
+                    System.out.println("rec = " + Item.itemRegistry.getNameForObject(rec.getItem()));
+                    System.out.println("test = " + ((Item.itemRegistry.getNameForObject(rec.getItem())).toString().contains("block")));
+                    if ((Item.itemRegistry.getNameForObject(rec.getItem())).toString().contains("block")) {
+                        String itemSub = (Item.itemRegistry.getNameForObject(stack.getItem())).toString();
+                        String item = Item.itemRegistry.getNameForObject(stack.getItem()).toString();
+
+                        String itemTypeName = item.substring(item.lastIndexOf(':'), item.lastIndexOf('_'));
+
+                        if (itemSub.contains(itemTypeName)) blockRecipe = true;
+                    }
+                }
+
+                if (blockRecipe) recipe.setValid(false);
                 return recipe;
             }
         }
@@ -34,6 +51,16 @@ public class RecipeList {
 
     public boolean addRecipe(Recipe recipe) {
         return recipeList.add(recipe);
+    }
+
+    public void removeRecipe(Recipe recipe) {
+
+        for (Recipe base : recipeList) {
+            if (base.matches(recipe)) {
+                recipeList.remove(base);
+            }
+        }
+
     }
 
     public RecipeList copy() {

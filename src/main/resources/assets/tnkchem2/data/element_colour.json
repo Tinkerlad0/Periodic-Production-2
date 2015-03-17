@@ -1,0 +1,592 @@
+[
+  {
+    "Z": 1,
+    "Element": "Hydrogen",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 2,
+    "Element": "Helium",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 3,
+    "Element": "Lithium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 4,
+    "Element": "Beryllium",
+    "Colour": "SlateGray"
+  },
+  {
+    "Z": 5,
+    "Element": "Boron",
+    "Colour": "Black"
+  },
+  {
+    "Z": 6,
+    "Element": "Carbon",
+    "Colour": "Black"
+  },
+  {
+    "Z": 7,
+    "Element": "Nitrogen",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 8,
+    "Element": "Oxygen",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 9,
+    "Element": "Fluorine",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 10,
+    "Element": "Neon",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 11,
+    "Element": "Sodium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 12,
+    "Element": "Magnesium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 13,
+    "Element": "Aluminum",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 14,
+    "Element": "Silicon",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 15,
+    "Element": "Phosphorus",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 16,
+    "Element": "Sulfur",
+    "Colour": "Yellow"
+  },
+  {
+    "Z": 17,
+    "Element": "Chlorine",
+    "Colour": "Yellow"
+  },
+  {
+    "Z": 18,
+    "Element": "Argon",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 19,
+    "Element": "Potassium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 20,
+    "Element": "Calcium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 21,
+    "Element": "Scandium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 22,
+    "Element": "Titanium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 23,
+    "Element": "Vanadium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 24,
+    "Element": "Chromium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 25,
+    "Element": "Manganese",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 26,
+    "Element": "Iron",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 27,
+    "Element": "Cobalt",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 28,
+    "Element": "Nickel",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 29,
+    "Element": "Copper",
+    "Colour": "Copper"
+  },
+  {
+    "Z": 30,
+    "Element": "Zinc",
+    "Colour": "SlateGray"
+  },
+  {
+    "Z": 31,
+    "Element": "Gallium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 32,
+    "Element": "Germanium",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 33,
+    "Element": "Arsenic",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 34,
+    "Element": "Selenium",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 35,
+    "Element": "Bromine",
+    "Colour": "Red"
+  },
+  {
+    "Z": 36,
+    "Element": "Krypton",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 37,
+    "Element": "Rubidium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 38,
+    "Element": "Strontium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 39,
+    "Element": "Yttrium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 40,
+    "Element": "Zirconium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 41,
+    "Element": "Niobium",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 42,
+    "Element": "Molybdenum",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 43,
+    "Element": "Technetium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 44,
+    "Element": "Ruthenium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 45,
+    "Element": "Rhodium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 46,
+    "Element": "Palladium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 47,
+    "Element": "Silver",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 48,
+    "Element": "Cadmium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 49,
+    "Element": "Indium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 50,
+    "Element": "Tin",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 51,
+    "Element": "Antimony",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 52,
+    "Element": "Tellurium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 53,
+    "Element": "Iodine",
+    "Colour": "SlateGray"
+  },
+  {
+    "Z": 54,
+    "Element": "Xenon",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 55,
+    "Element": "Cesium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 56,
+    "Element": "Barium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 57,
+    "Element": "Lanthanum",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 58,
+    "Element": "Cerium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 59,
+    "Element": "Praseodymium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 60,
+    "Element": "Neodymium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 61,
+    "Element": "Promethium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 62,
+    "Element": "Samarium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 63,
+    "Element": "Europium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 64,
+    "Element": "Gadolinium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 65,
+    "Element": "Terbium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 66,
+    "Element": "Dysprosium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 67,
+    "Element": "Holmium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 68,
+    "Element": "Erbium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 69,
+    "Element": "Thulium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 70,
+    "Element": "Ytterbium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 71,
+    "Element": "Lutetium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 72,
+    "Element": "Hafnium",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 73,
+    "Element": "Tantalum",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 74,
+    "Element": "Tungsten",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 75,
+    "Element": "Rhenium",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 76,
+    "Element": "Osmium",
+    "Colour": "SlateGray"
+  },
+  {
+    "Z": 77,
+    "Element": "Iridium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 78,
+    "Element": "Platinum",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 79,
+    "Element": "Gold",
+    "Colour": "Gold"
+  },
+  {
+    "Z": 80,
+    "Element": "Mercury",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 81,
+    "Element": "Thallium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 82,
+    "Element": "Lead",
+    "Colour": "SlateGray"
+  },
+  {
+    "Z": 83,
+    "Element": "Bismuth",
+    "Colour": "Gray"
+  },
+  {
+    "Z": 84,
+    "Element": "Polonium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 85,
+    "Element": "Astatine",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 86,
+    "Element": "Radon",
+    "Colour": "Colorless"
+  },
+  {
+    "Z": 87,
+    "Element": "Francium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 88,
+    "Element": "Radium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 89,
+    "Element": "Actinium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 90,
+    "Element": "Thorium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 91,
+    "Element": "Protactinium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 92,
+    "Element": "Uranium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 93,
+    "Element": "Neptunium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 94,
+    "Element": "Plutonium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 95,
+    "Element": "Americium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 96,
+    "Element": "Curium",
+    "Colour": "Silver"
+  },
+  {
+    "Z": 97,
+    "Element": "Berkelium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 98,
+    "Element": "Californium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 99,
+    "Element": "Einsteinium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 100,
+    "Element": "Fermium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 101,
+    "Element": "Mendelevium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 102,
+    "Element": "Nobelium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 103,
+    "Element": "Lawrencium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 104,
+    "Element": "Rutherfordium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 105,
+    "Element": "Dubnium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 106,
+    "Element": "Seaborgium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 107,
+    "Element": "Bohrium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 108,
+    "Element": "Hassium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 109,
+    "Element": "Meitnerium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 110,
+    "Element": "Darmstadtium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 111,
+    "Element": "Roentgenium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 112,
+    "Element": "Ununbium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 113,
+    "Element": "Ununtrium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 114,
+    "Element": "Ununquadium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 115,
+    "Element": "Ununpentium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 116,
+    "Element": "Ununhexium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 117,
+    "Element": "Ununseptium",
+    "Colour": "N/A"
+  },
+  {
+    "Z": 118,
+    "Element": "Ununoctium",
+    "Colour": "N/A"
+  }
+]

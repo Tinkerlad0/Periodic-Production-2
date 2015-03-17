@@ -18,13 +18,23 @@ public class ElementObject {
     private String specific_heat;
     private String ionization_potential;
     private String thermal_conductivity;
+    private String melting_point;
+    private String boiling_point;
 
-    public ElementObject(){
+    public ElementObject() {
 
     }
 
+    public String getMelting_point() {
+        return melting_point;
+    }
+
+    public String getBoiling_point() {
+        return boiling_point;
+    }
+
     @Override
-    public String toString(){
+    public String toString() {
         return (name + " : " + symbol + " : " + Z);
     }
 
